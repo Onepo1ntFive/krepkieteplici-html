@@ -1,0 +1,287 @@
+/*----------*/
+.b-head-line {
+    margin: 0 -3000px;
+    padding: 0 3000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-gray;
+}
+/*----------*/
+.b-head-menu {
+    a {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        padding-left: 3rem;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $color-font;
+        transition: color 0.2s ease-in-out;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    a:hover {
+        text-decoration: none;
+        color: $color-green;
+    }
+}
+/*----------*/
+.b-head-social {
+    img {
+        opacity: 1;
+        background-color: $color-gray;
+        border-radius: 100rem;
+        transition: opacity 0.2s ease-in-out;
+    }
+    a {
+        margin-right: 1.5rem;
+        display: inline-block;
+        text-decoration: none;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a:hover {
+        text-decoration: none;
+
+        img {
+            opacity: 0.75;
+        }
+    }
+}
+/*----------*/
+.b-head {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .head__contacts {
+        padding-left: 6rem;
+        position: relative;
+
+        a[href^="tel:"] {
+            font-size: 2.5rem;
+            font-family: $font-family-slab;
+            font-weight: bold;
+            color: $color-font;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 100rem;
+                background-color: $color-gray;
+
+                @media (min-width: $breakpoint-tablet) {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        a[href^="tel:"]:hover {
+            text-decoration: none;
+            color: $color-green;
+        }
+        a[href^="mailto:"] {
+            text-decoration: none;
+            font-size: 1.4rem;
+            border-bottom: 1px solid transparent;
+            color: $color-green;
+            transition: border-bottom-color 0.2s ease-in-out;
+        }
+        a[href^="mailto:"]:hover {
+            border-bottom-color: $color-green;
+            text-decoration: none;
+        }
+    }
+    .head__logo {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .head__cart {
+        img {
+            border-radius: 100rem;
+            background-color: $color-red;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+
+            @media (min-width: $breakpoint-tablet) {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+               
+            }
+        }
+        a {
+            padding-left: 6rem;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+
+            img {
+                opacity: 0.75;
+            }
+        }
+        .head-cart__title {
+            font-family: $font-family-slab;
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: $color-font;
+        }
+        .head-cart__count {
+            font-size: 1.4rem;
+            color: $color-font-gray;
+        }
+    }
+}
+/*----------*/
+.b-menusearch-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*----------*/
+.b-menu {
+    margin-right: 2rem;
+    width: 26rem;
+    flex: none;
+
+    ins {
+        margin-top: -1px;
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        height: 2px;
+        width: 20px;
+        border-radius: 100rem;
+        background-color: $color-white;
+
+        &::before,
+        &::after {
+            content: '';
+            border-radius: 100rem;
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color-white;
+            transform-origin: center center;
+            transform: rotate(0deg);
+            transition-property: transform, bottom, top, background-color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+
+        &::before {
+            bottom: calc(100% + 4px);
+        }
+        &::after {
+            top: calc(100% + 4px);
+        }
+    }
+    a {
+        padding: 0.9rem 2rem;
+        position: relative;
+        width: 100%;
+        display: block;
+        background-color: $color-green;
+        border-radius: 0.5rem;
+        opacity: 1;
+        text-decoration: none;  
+        color: $color-white;
+        transition: opacity 0.3s ease-in-out;
+    }
+    a:hover {
+        text-decoration: none;
+        opacity: 0.75;
+    }
+    a:focus {
+        ins {
+            background-color: transparent;
+    
+            &::before {
+                bottom: 0;
+                transform: rotate(225deg);
+            }
+            &::after {
+                top: 0;
+                transform: rotate(-225deg);
+            }
+        }
+    }
+}
+/*----------*/
+.b-search {
+    position: relative;
+    flex: 1 auto;
+
+    input {
+        border: 2px solid $color-green;
+        border-radius: 0.5rem;
+        padding: 1rem 2rem;
+        margin: 0;
+        background: none;
+        font-size: 1.6rem;
+        -webkit-appearance: none;
+        width: 100%;
+        transition: border-color 0.2s ease-in-out;
+
+        &:focus {
+            border-color: $color-gray;
+        }
+
+        ::-webkit-input-placeholder {
+            color: $color-gray;
+        }
+        :-moz-placeholder {
+            color: $color-gray;
+            opacity: 1;
+        }
+        ::-moz-placeholder {
+            color: $color-gray;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            color: $color-gray;
+        }
+    }
+    button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 4.5rem;
+        background: none;
+        -webkit-appearance: none;
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}
+/*----------*/

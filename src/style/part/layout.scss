@@ -1,0 +1,49 @@
+.l-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+}
+/*----------*/
+.l-header {
+    margin: auto;
+    max-width: 1280px;
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet) {
+    }
+    @media (min-width: $breakpoint-desktop) {
+    }
+}
+/*----------*/
+.l-content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 1 auto;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .content__wrap {
+        margin: auto;
+        max-width: 1280px;
+        width: 100%;
+    }
+}
+/*----------*/
+.l-footer {}
+/*----------*/
