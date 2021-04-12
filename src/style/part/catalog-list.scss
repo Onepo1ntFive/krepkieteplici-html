@@ -1,0 +1,16 @@
+.b-catalog-wrap {
+    display: flex;
+    flex-flow: row wrap;
+
+    .catalog-wrap__filter {
+        width: 30rem;
+        flex: none;
+    }
+    .catalog-wrap__catalog {
+        flex: 1 auto;
+    }
+}
+/*----------*/
+/*----------*/
+/*----------*/
+/*----------*/

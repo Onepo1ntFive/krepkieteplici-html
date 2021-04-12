@@ -126,7 +126,7 @@
             transition: border-bottom-color 0.2s ease-in-out;
 
             @media (min-width: $breakpoint-tablet) {
-                display: block;
+                display: inline-block;
             }
         }
         a[href^="mailto:"]:hover {
