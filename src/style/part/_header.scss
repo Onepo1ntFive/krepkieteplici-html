@@ -30,7 +30,7 @@
     }
 }
 /*----------*/
-.b-head-social {
+.b-icons-social {
     img {
         opacity: 1;
         background-color: $color-gray;
@@ -53,6 +53,12 @@
             opacity: 0.75;
         }
     }
+
+    &--white {
+        img {
+            background-color: $color-white;
+        }
+    }
 }
 /*----------*/
 .b-head {
@@ -60,10 +66,22 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    min-height: 10rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        min-height: 11rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        min-height: 15rem;
+    }
 
     .head__contacts {
-        padding-left: 6rem;
         position: relative;
+        
+        @media (min-width: $breakpoint-tablet) {
+            padding-left: 6rem;
+        }
 
         a[href^="tel:"] {
             font-size: 2.5rem;
@@ -86,17 +104,30 @@
                     transform: translateY(-50%);
                 }
             }
+
+            span {
+                display: none;
+
+                @media (min-width: $breakpoint-tablet) {
+                    display: block;
+                }
+            }
         }
         a[href^="tel:"]:hover {
             text-decoration: none;
             color: $color-green;
         }
         a[href^="mailto:"] {
+            display: none;
             text-decoration: none;
             font-size: 1.4rem;
             border-bottom: 1px solid transparent;
             color: $color-green;
             transition: border-bottom-color 0.2s ease-in-out;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: block;
+            }
         }
         a[href^="mailto:"]:hover {
             border-bottom-color: $color-green;
@@ -104,12 +135,19 @@
         }
     }
     .head__logo {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
 
         img {
             display: inline-block;
             vertical-align: middle;
+            max-width: 11rem;
+
+            @media (min-width: $breakpoint-desktop) {
+                max-width: none;
+            }
         }
     }
     .head__cart {
@@ -128,10 +166,13 @@
             }
         }
         a {
-            padding-left: 6rem;
             position: relative;
             display: inline-block;
             text-decoration: none;
+            
+            @media (min-width: $breakpoint-tablet) {
+                padding-left: 6rem;
+            }
         }
         a:hover {
             text-decoration: none;
@@ -141,14 +182,24 @@
             }
         }
         .head-cart__title {
+            display: none;
             font-family: $font-family-slab;
             font-weight: bold;
             font-size: 2.5rem;
             color: $color-font;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: block;
+            }
         }
         .head-cart__count {
+            display: none;
             font-size: 1.4rem;
             color: $color-font-gray;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: block;
+            }
         }
     }
 }
@@ -161,19 +212,38 @@
 }
 /*----------*/
 .b-menu {
-    margin-right: 2rem;
-    width: 26rem;
+    margin-right: 1rem;
+    width: 4.2rem;
     flex: none;
 
+    @media (min-width: $breakpoint-tablet) {
+        margin-right: 2rem;
+        width: 11rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        width: 26rem;
+    }
+
     ins {
-        margin-top: -1px;
-        position: absolute;
-        right: 2rem;
-        top: 50%;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
         height: 2px;
         width: 20px;
         border-radius: 100rem;
         background-color: $color-white;
+        
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-top: -1px;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            right: 2rem;
+        }
 
         &::before,
         &::after {
@@ -200,7 +270,7 @@
         }
     }
     a {
-        padding: 0.9rem 2rem;
+        padding: 0.9rem 0;
         position: relative;
         width: 100%;
         display: block;
@@ -208,8 +278,36 @@
         border-radius: 0.5rem;
         opacity: 1;
         text-decoration: none;  
+        text-transform: uppercase;
         color: $color-white;
         transition: opacity 0.3s ease-in-out;
+        text-align: center;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding: 0.9rem 1rem;
+            text-align: left;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            padding: 0.9rem 2rem;
+        }
+
+        &::before {
+            @media (min-width: $breakpoint-tablet) {
+                content: 'Меню';
+                display: block;
+            }
+            @media (min-width: $breakpoint-desktop) {
+                display: none;
+            }
+        }
+
+        span {
+            display: none;
+
+            @media (min-width: $breakpoint-desktop) {
+                display: block;
+            }
+        }
     }
     a:hover {
         text-decoration: none;

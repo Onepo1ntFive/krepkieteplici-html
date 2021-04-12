@@ -1,0 +1,140 @@
+.b-footer {
+    padding-top: 3rem;
+    position: relative;
+    margin: auto;
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    font-size: 1.5rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 4.5rem;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -3000px;
+        bottom: 0;
+        left: -3000px;
+        z-index: -1;
+        background-color: #f1f3f4;
+    }
+
+    h4 {
+        font-family: $font-family-slab;
+        font-size: 2rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__menu {
+        padding-bottom: 3rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 0;
+            width: 50%;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-font;
+            transition: color 0.2s ease-in-out;
+        }
+        a:hover {
+            text-decoration: none;
+            color: $color-green;
+        }
+    }
+    .footer__menu-item {
+        padding-bottom: 3rem;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 0;
+            width: 50%;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .footer__contacts {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 0;
+            width: 50%;
+        }
+
+        a[href^="tel:"] {
+            color: $color-font;
+        }
+        a[href^="tel:"]:hover {
+            color: $color-green;
+        }
+    }
+    .footer__contacts-item {
+        padding-bottom: 3rem;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-bottom: 0;
+            width: 50%;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+        span {
+            display: inline-block;
+        }
+    }
+    .footer__line {
+        margin-top: 3rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-top: 1px solid $color-gray;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        color: $color-font-gray;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 4.5rem;
+        }
+
+        & > div {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+}
+/*----------*/
+/*----------*/
+/*----------*/
+/*----------*/
+/*----------*/

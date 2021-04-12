@@ -39,7 +39,7 @@ h1,
     margin-bottom: 0.75em;
     font-family: $font-family;
     line-height: 0.9;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 4rem;
     color: $color-font;
 
@@ -52,7 +52,7 @@ h2,
     margin-bottom: 0.75em;
     font-family: $font-family;
     line-height: 0.9;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 4rem;
     color: $color-font;
 
@@ -65,7 +65,7 @@ h3,
     margin-bottom: 0.75em;
     font-family: $font-family;
     line-height: 0.9;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 3.2rem;
     color: $color-font;
 
@@ -73,13 +73,21 @@ h3,
         font-size: 4.2rem;
     }
 }
-h3,
-.h3 {
+h4,
+.h4 {
     margin-bottom: 0.75em;
     font-family: $font-family;
     line-height: 0.9;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 2.4rem;
+    color: $color-font;
+}
+a {
+    color: $color-green;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+a:hover {
     color: $color-font;
 }
 /*----------*/
