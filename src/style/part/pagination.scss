@@ -1,0 +1,42 @@
+.b-pagination {
+    vertical-align: middle;
+    text-align: center;
+
+    a, span {
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+        border: 1px solid $color-gray;
+        border-radius: 0.5rem;
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        box-shadow: none;
+        line-height: 4rem;
+        text-align: center;
+        transition-property: border-color, box-shadow;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+    }
+    a.active {
+        border-color: $color-green;
+    }
+    a:hover {
+        border-color: $color-green;
+        box-shadow: 0 0 0 1px $color-green;
+
+        &:hover path {
+            fill: $color-green;
+        }
+    }
+    a.pagination__prev,
+    a.pagination__next {
+        border: 0;
+    }
+    svg {
+        vertical-align: middle;
+        
+        path {
+            transition: fill 0.2s ease-in-out;
+        }
+    }
+}
