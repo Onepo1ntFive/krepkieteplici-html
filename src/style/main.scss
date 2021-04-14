@@ -1,3 +1,5 @@
+@import "./libs/nouislider.scss";
+
 @import "./part/_var.scss";
 @import "./part/_reset.scss";
 @import "./part/_fonts.scss";
@@ -9,6 +11,7 @@
 @import "./part/minifilter.scss";
 @import "./part/catalog.scss";
 @import "./part/catalog-list.scss";
+@import "./part/filter.scss";
 @import "./part/pagination.scss";
 @import "./part/callback-banner.scss";
 @import "./part/video-banner.scss";
