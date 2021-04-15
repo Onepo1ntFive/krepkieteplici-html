@@ -1,6 +1,19 @@
 .b-breadcrums {
+    position: relative;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -3000px;
+        right: -3000px;
+        top: -2rem;
+        bottom: 0;
+        z-index: -1;
+        background-color: $color-lightgray;
+    }
 
     a {
         text-decoration: none;
