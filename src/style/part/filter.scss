@@ -1,5 +1,121 @@
 /*----------*/
+.b-filter-fixed {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -150%;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+    
+    @media (min-width: $breakpoint-tablet) {
+        max-width: 38rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        position: static;
+    }
+
+    &.active {
+        left: 0;
+    }
+
+    .filter-fixed__title {
+        padding: 1rem 2rem;
+        font-family: $font-family-slab;
+        font-size: 2rem;
+        position: relative;
+        font-weight: bold;
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
+
+        @media (min-width: $breakpoint-desktop) {
+            display: none;
+        }
+    }
+    .filter-fixed__close {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.3;
+
+        &:hover {
+            opacity: 0.5;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+    }
+}
+@media (max-width: calc( #{$breakpoint-desktop} - 1px )) {
+    .b-filter-fixed-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 998;
+        background-color: $color-black;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        
+        &.active {
+            opacity: 0.75;
+            pointer-events: all;
+        }
+    }
+}
+/*----------*/
+.b-filter-btn {
+    margin-bottom: 4rem;
+
+    span {
+        padding: 0.7rem;
+        border: 2px solid $color-green;
+        border-radius: 0.5rem;
+        display: inline-block;
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: $color-green;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: calc(50% - 1.5rem);
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        display: none;
+    }
+}
+/*----------*/
 .b-filter {
+    padding-top: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    height: calc(100% - 50px);
+    width: 100%;
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: 0;
+        height: auto;
+    }
+
+    .filter__inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        flex: 1 auto;
+        overflow: auto;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-left: 0;
+            padding-right: 0;
+            overflow: visible;
+        }
+    }
     .filter__collapse {
         margin-bottom: 1.5rem;
         border-bottom: 1px solid $color-gray;
@@ -8,9 +124,13 @@
         margin-bottom: 1.5rem;
         position: relative;
         font-family: $font-family-slab;
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: bold;
         cursor: pointer;
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 2.2rem;
+        }
 
         &::before {
             content: '';
@@ -143,7 +263,23 @@
         }
     }
     .filter__btns {
+        padding: 1rem 2rem;
+        margin: 0 -2rem;
+        display: flex;
+        flex-flow: row wrap;
+        flex: none;
+        align-items: center;
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
+
+        @media (min-width: $breakpoint-desktop) {
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+        }
+
         .filter__reset {
+            width: 50%;
+
             img {
                 margin-left: 1rem;
                 display: inline-block;
@@ -161,34 +297,32 @@
                     transform: rotate(180deg);
                 }
             }
-            
+        }
+        .filter__submit {
+            width: 50%;
+
+            @media (min-width: $breakpoint-desktop) {
+                display: none;
+            }
+
+            span {
+                padding: 1rem 2rem;
+                border-radius: 0.5rem;
+                display: block;
+                vertical-align: middle;
+                background: $color-red;
+                opacity: 1;
+                text-transform: uppercase;
+                text-align: center;
+                color: $color-white;
+                transition: opacity 0.2s ease-in-out;
+
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
         }
     }
-}
-/*----------*/
-.b-filter-fixed {
-    padding: 0 2rem;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    overflow: auto;
-    z-index: 999;
-
-    @media (min-width: $breakpoint-desktop) {
-        position: static;
-    }
-}
-.b-filter-fixed-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 998;
-    background-color: $color-black;
-    opacity: 0.75;
 }
 /*----------*/
 .noUi-target {

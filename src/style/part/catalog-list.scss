@@ -1,9 +1,11 @@
 .b-catalog-wrap {
     position: relative;
-    margin-bottom: 10rem;
-    padding-bottom: 10rem;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
 
     @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 10rem;
+        padding-bottom: 10rem;
         display: flex;
         flex-flow: row nowrap;
         
@@ -47,6 +49,10 @@
         display: flex;
         flex-flow: column nowrap;
         width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     
         @media (min-width: $breakpoint-tablet) {
             margin: 0 1.5rem 3rem;
@@ -88,11 +94,10 @@
         justify-content: space-between;
     }
     .catalog-list__size {
-        select {
-            min-width: 15rem;
-        }
+        width: calc(100% - 12.5rem);
     }
     .catalog-list__assembly {
+        width: 11rem;
         padding: 0.5rem 1rem;
         border: 1px solid $color-gray;
         border-radius: 0.5rem;
@@ -103,6 +108,7 @@
 
         & > label {
             margin-right: 1rem;
+            cursor: pointer;
         }
     }
     .catalog-list__footer {
@@ -133,7 +139,7 @@
             border-radius: 100rem;
             background-color: $color-red;
             opacity: 1;
-            transition: oapcity 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
         }
 
         &:hover {

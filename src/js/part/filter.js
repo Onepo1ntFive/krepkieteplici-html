@@ -36,7 +36,6 @@
 
 
     // collapse
-
     let collapseTitle = document.querySelectorAll('.js-collapse-title');
     Array.prototype.forEach.call(collapseTitle, function (el, i) {
         let collapseContent = el.nextElementSibling;
@@ -46,5 +45,28 @@
         });
 
     });
+
+    //show filter on mobile
+    const bodyBlock = document.querySelector('body');
+    const filterBtnShow = document.querySelector('.js-filter-show');
+    const filterBtnHide = document.querySelectorAll('.js-filter-close');
+    const filterBtnBg = document.querySelector('.js-filter-bg');
+    const filterBtnBlock = document.querySelector('.js-filter-block');
+
+    // show
+    filterBtnShow.addEventListener('click', () => {
+        bodyBlock.classList.add('ov-h');
+        filterBtnBg.classList.add('active');
+        filterBtnBlock.classList.add('active');
+    })
+    // hide
+    Array.prototype.forEach.call(filterBtnHide, function (el, i) {
+        el.addEventListener('click', () => {
+            bodyBlock.classList.remove('ov-h');
+            filterBtnBg.classList.remove('active');
+            filterBtnBlock.classList.remove('active');
+        })
+    });
+
 
 })();
