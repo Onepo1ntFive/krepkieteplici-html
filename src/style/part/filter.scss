@@ -264,7 +264,6 @@
     }
     .filter__btns {
         padding: 1rem 2rem;
-        margin: 0 -2rem;
         display: flex;
         flex-flow: row wrap;
         flex: none;
@@ -273,7 +272,6 @@
 
         @media (min-width: $breakpoint-desktop) {
             padding: 0;
-            margin: 0;
             box-shadow: none;
         }
 
