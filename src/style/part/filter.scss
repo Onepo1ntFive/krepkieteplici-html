@@ -158,33 +158,6 @@
             }
         }
     }
-    .filter__input {
-        margin-right: 1rem;
-        position: relative;
-        width: 2rem;
-        height: 2rem;
-        border: 2px solid $color-gray2;
-        cursor: pointer;
-        transition: border-color 0.2s ease-in-out;
-
-        &:hover {
-            border-color: $color-green;
-        }
-
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: opacity 0.2s ease-in-out;
-        }
-    }
-    .filter__label {
-        cursor: pointer;
-    }
     .filter__range {
         padding-bottom: 1.5rem;
 
@@ -304,14 +277,14 @@
             }
 
             span {
-                padding: 1rem 2rem;
+                padding: 1.5rem 2rem;
                 border-radius: 0.5rem;
                 display: block;
-                vertical-align: middle;
                 background: $color-red;
                 opacity: 1;
                 text-transform: uppercase;
                 text-align: center;
+                font-size: 1.5rem;
                 color: $color-white;
                 transition: opacity 0.2s ease-in-out;
 
