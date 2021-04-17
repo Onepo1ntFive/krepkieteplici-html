@@ -1,6 +1,10 @@
 .b-cart {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     position: relative;
+    
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 10rem;
+    }
 
     .cart__items {}
     .cart__item {
@@ -259,7 +263,7 @@
             left: 50%;
             top: 50%;
             border-radius: 1rem;
-            width: 16px;
+            width: 14px;
             height: 2px;
             background-color: $color-font-gray;
             transition: background-color 0.2s ease-in-out;
