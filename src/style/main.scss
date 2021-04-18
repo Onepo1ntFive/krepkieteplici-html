@@ -1,19 +1,24 @@
 @import "./libs/nouislider.scss";
+@import "./libs/tiny-slider.scss";
 
 @import "./part/_var.scss";
 @import "./part/_reset.scss";
 @import "./part/_fonts.scss";
+
 @import "./part/app.scss";
 @import "./part/layout.scss";
+
 @import "./part/header.scss";
 @import "./part/footer.scss";
 @import "./part/breadcrums.scss";
 @import "./part/minifilter.scss";
 @import "./part/catalog.scss";
 @import "./part/catalog-list.scss";
+@import "./part/catalog-product.scss";
+@import "./part/catalog-product-gallery.scss";
 @import "./part/filter.scss";
 @import "./part/pagination.scss";
 @import "./part/callback-banner.scss";
 @import "./part/video-banner.scss";
 @import "./part/cart-items.scss";
-@import "./part/cart-form.scss";
+@import "./part/form.scss";
