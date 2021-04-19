@@ -4,27 +4,41 @@
     flex-flow: row wrap;
     justify-content: space-between;
 
-    .product__gallery {
-        width: calc(50% - 1.5rem);
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 8rem;
     }
+
+    .product__gallery,
     .product__content {
-        width: calc(50% - 1.5rem);
+        width: 100%;
+        
+        @media (min-width: $breakpoint-desktop) {
+            width: calc(50% - 1.5rem);
+        }
     }
     .product__specs {
         padding-top: 3rem;
         padding-bottom: 3rem;
         margin-top: 3rem;
         border-top: 1px solid $color-gray;
-        column-count: 2;          
-        column-gap: 30px;
         font-size: 1.5rem;
         color: $color-font-gray;
 
+        @media (min-width: $breakpoint-tablet) {
+            column-count: 2;          
+            column-gap: 30px;
+        }
+
         li {
-            display: inline-block;
+            padding-bottom: 0.3rem;
+            display: block;
             -webkit-column-break-inside: avoid;
             page-break-inside: avoid;
             break-inside: avoid;
+
+            @media (min-width: $breakpoint-tablet) {
+                display: inline-block;
+            }
         }
     }
 
@@ -64,8 +78,62 @@
         font-size: 3.4rem;
     }
     .product__buy {
+        padding-top: 2rem;
         margin-left: auto;
         width: 100%;
-        max-width: 26rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-top: 0;
+            max-width: 26rem;
+        }
     }
 }
+/*----------*/
+.b-specs {
+    li {
+        margin-bottom: 1rem;
+        position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+
+        @media (min-width: $breakpoint-tablet) {
+            flex-wrap: nowrap;
+        }
+    }
+    span {
+        padding-right: 2rem;
+        position: relative;
+        overflow: hidden;
+        font-size: 1.4rem;
+        width: 100%;
+        color: $color-font-gray;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: inherit;
+            width: 50%;
+        }
+    }
+    ins {
+        display: inline;
+        text-decoration: none;
+        background-color: $color-white;
+
+        &::before {
+            content: '';
+            display: none;
+            position: absolute;
+            left: 0;
+            height: 2px;
+            bottom: 0.2em;
+            width: calc(100% - 1rem);
+            z-index: -1;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23E5E5E5FF' stroke-width='4' stroke-dasharray='2%2c 4' stroke-dashoffset='5' stroke-linecap='butt'/%3e%3c/svg%3e");
+
+            @media (min-width: $breakpoint-tablet) {
+                display: block;
+            }
+        }
+    }
+}
+/*----------*/
