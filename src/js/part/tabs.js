@@ -36,11 +36,11 @@
                 tabContentCur.style.display = 'block';
             } else if (windowWidth < 1200) {
                 Array.prototype.forEach.call(tabContentAll, function (tabContentSlide, i) {
-                    slideUp(tabContentSlide, 200);
+                    slideUp(tabContentSlide, 500);
                 });
                 setTimeout(function () {
-                    slideDown(tabContentCur, 200);
-                }, 200);
+                    slideDown(tabContentCur, 500);
+                }, 500);
                 let topPos = document.querySelector('.tabs-acc__items').offsetTop;
                 scrollIt(topPos, 1000, 'easeOutQuad');
             }

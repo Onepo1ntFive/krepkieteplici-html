@@ -423,6 +423,9 @@
     }
 }
 /*----------*/
+.b-rating {
+    overflow: hidden;
+}
 .rating {
     border: none;
     float: left;
@@ -444,14 +447,34 @@
         cursor: pointer;
     }
     & > input:checked ~ label,
-    .rating:not(:checked) > label:hover,
-    .rating:not(:checked) > label:hover ~ label {
-        background: url("../img/icon-star-full.svg") 50% 50% no-repeat;
+    &:not(:checked) > label:hover,
+    &:not(:checked) > label:hover ~ label {
+        background: url("../img/icon-star-full.svg") 50% 50%/25px no-repeat;
     }
     & > input:checked + label:hover,
     & > input:checked ~ label:hover,
     & > label:hover ~ input:checked ~ label,
     & > input:checked ~ label:hover ~ label {
-        background: url("../img/icon-star-full.svg") 50% 50% no-repeat;
+        background: url("../img/icon-star-full.svg") 50% 50%/25px no-repeat;
+    }
+
+    &--notouch {
+        pointer-events: none;
+    }
+    &--big > label:before  {
+        width: 4rem;
+        height: 4rem;
+        background: url("../img/icon-star.svg") 50% 50%/40px auto no-repeat;
+    }
+    &--big > input:checked ~ label,
+    &--big:not(:checked) > label:hover,
+    &--big:not(:checked) > label:hover ~ label {
+        background: url("../img/icon-star-full.svg") 50% 50%/40px no-repeat;
+    }
+    &--big > input:checked + label:hover,
+    &--big > input:checked ~ label:hover,
+    &--big > label:hover ~ input:checked ~ label,
+    &--big > input:checked ~ label:hover ~ label {
+        background: url("../img/icon-star-full.svg") 50% 50%/40px no-repeat;
     }
 }

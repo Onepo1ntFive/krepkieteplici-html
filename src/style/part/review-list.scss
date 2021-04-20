@@ -1,0 +1,204 @@
+.b-reviews {
+    margin-bottom: 7rem;
+
+    .reviews__total {
+        padding-bottom: 3rem;
+
+        p {
+            color: $color-font-gray;
+            font-size: 1.5rem;
+        }
+    }
+    .reviews__total-stars {
+        padding-bottom: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        span {
+            padding-left: 2rem;
+            display: inline-block;
+            font-size: 3.8rem;
+            font-family: $font-family-slab;
+            font-weight: bold;
+            line-height: 1;
+        }
+    }
+    .reviews__total-of {
+        font-size: 1.8rem;
+        font-family: $font-family-slab;
+        font-weight: bold;
+    }
+    .reviews__total-photos {
+        display: flex;
+        flex-flow: row wrap;
+        margin-right: -1rem;
+
+        h3 {
+            width: 100%;
+        }
+        img {
+            padding: 0.2rem;
+            border: 1px solid $color-gray;
+            border-radius: 0.5rem;
+            width: 8rem;
+            max-width: 100%;
+            transition: border-color 0.2s ease-in-out;
+        }
+        a {
+            margin-right: 1rem;
+            max-width: calc(20% - 1rem);
+
+            &:hover {
+                img {
+                    border-color: $color-font;
+                }
+            }
+        }
+    }
+    .reviews__items {
+        padding-bottom: 2rem;
+    }
+    .reviews__item {
+        margin-top: 4rem;
+        padding-top: 4rem;
+        border-top: 1px solid $color-gray;
+    
+
+        @media (min-width: $breakpoint-desktop) {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+    }
+    .reviews__content {
+        @media (min-width: $breakpoint-desktop) {
+            width: calc(100% - 30rem);
+        }
+    }
+    .reviews__header {
+        padding-bottom: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 1.5rem;
+        color: $color-font-gray;
+        
+        & > div {
+            margin-right: 3rem;
+        }
+    }
+    .reviews__name {
+        font-family: $font-family-slab;
+        font-weight: bold;
+        color: $color-font;
+    }
+    .reviews__plus,
+    .reviews__minus {
+        padding-left: 6rem;
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        
+        @media (min-width: $breakpoint-tablet) {
+            padding-left: 8rem;
+        }
+    }
+    .reviews__plus {
+        background: url('../img/review-plus.svg') 0 0 no-repeat;
+    }
+    .reviews__minus {
+        background: url('../img/review-minus.svg') 0 0 no-repeat;
+    }
+    .reviews__photos {
+        margin-right: -1rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        img {
+            padding: 0.2rem;
+            border: 1px solid $color-gray;
+            border-radius: 0.5rem;
+            width: 8rem;
+            max-width: 100%;
+            transition: border-color 0.2s ease-in-out;
+        }
+        a {
+            margin-right: 1rem;
+            max-width: calc(20% - 1rem);
+
+            &:hover {
+                img {
+                    border-color: $color-font;
+                }
+            }
+        }
+    }
+    .reviews__stars {
+        padding-top: 3rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-top: 0;
+            padding-left: 5rem;
+            width: 30rem;
+        }
+    }
+    .reviews__stars-item {
+        padding-bottom: 2.5rem;
+        width: 100%;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 25%;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            width: 100%;
+        }
+    }
+    .reviews__stars-title {
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .reviews__more {
+        padding: 1.2rem;
+        border-radius: 0.5rem;
+        background-color: $color-lightgray;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: $color-green;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $color-gray;
+        }
+    }
+}
+/*--*/
+.b-like {
+    margin: 0 -1rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    .like__item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        img {
+            margin-right: 1rem;
+            vertical-align: middle;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                opacity: 0.75;
+            }
+        }
+    }
+}
