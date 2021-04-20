@@ -1,6 +1,11 @@
 /*--------------------*/
 .b-tabs-acc {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 10rem;
+    }
+
     .tabs-acc__nav {
         display: none;
 

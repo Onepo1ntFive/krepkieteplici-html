@@ -148,6 +148,113 @@
             }
         }
     }
+    &--carousel {
+        margin-bottom: 5rem;
+        
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 10rem;
+        }
+
+        .catalog-list__header {
+            padding-bottom: 2rem;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                line-height: 1;
+                font-size: 1.5rem;
+                font-weight: bold;
+
+                img {
+                    transform: rotate(-180deg);
+                    transition: transform 0.2s ease-in-out;
+                }
+                &:hover {
+                    img {
+                        transform: translateX(0.5rem) rotate(-180deg);
+                    }
+                }
+            }
+        }
+        .catalog-list__item {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.swiper-container--catalog {
+    overflow: visible;
+
+    .swiper-slide {
+        height: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease-in-out;
+    }
+    .swiper-slide-visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.6rem;
+        background-color: $color-white;
+        border-radius: 100rem;
+        z-index: 2;
+        text-align: center;
+        box-shadow: 0px 0px 8px rgba(8, 35, 48, 0.24);
+        cursor: pointer;
+        transition: box-shadow 0.2s ease-in-out;
+        
+        @media (min-width: $breakpoint-desktop) {
+            width: 5rem;
+            height: 5rem;
+            line-height: 4.6rem;
+        }
+
+        &:hover {
+            box-shadow: 0px 4px 8px rgba(8, 35, 48, 0.24);
+        }
+
+        svg {
+            vertical-align: middle;
+            width: 1.8rem;
+                height: 1.8rem;
+            
+            @media (min-width: $breakpoint-desktop) {
+                width: auto;
+                height: auto;
+            }
+        }
+        path {
+            fill: $color-gray;
+            transition: fill 0.2s ease-in-out;
+        }
+
+        &:hover path {
+            fill: $color-green;
+        }
+    }
+    .swiper-button-prev {
+        left: -1.5rem;
+        @media (min-width: $breakpoint-desktop) {
+            left: -2.5rem;
+        }
+    }
+    .swiper-button-next {
+        right: -1.5rem;
+        @media (min-width: $breakpoint-desktop) {
+            right: -2.5rem;
+        }
+    }
 }
 /*----------*/
 /*----------*/
