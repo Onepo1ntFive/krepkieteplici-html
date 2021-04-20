@@ -16366,6 +16366,41 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 })();
 "use strict";
 
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      var thisInput = input;
+      var thisImage = thisInput.parentNode.querySelector('.js-file-image');
+      var thisLabel = thisInput.parentNode.querySelector('.js-file-load');
+      var thisRemove = thisInput.parentNode.querySelector('.js-file-remove');
+      thisImage.src = e.target.result;
+      thisLabel.classList.add('loaded');
+      thisRemove.style.display = 'block';
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+(function () {
+  var removeBtns = document.querySelectorAll('.js-file-remove');
+  Array.prototype.forEach.call(removeBtns, function (removeBtn, i) {
+    removeBtn.addEventListener('click', function () {
+      var thisInput = removeBtn.nextElementSibling;
+      var thisImage = thisInput.parentNode.querySelector('.js-file-image');
+      var thisLabel = thisInput.parentNode.querySelector('.js-file-load');
+      var thisRemove = thisInput.parentNode.querySelector('.js-file-remove');
+      thisInput.value = "";
+      thisImage.src = "./img/empty.png";
+      thisLabel.classList.remove('loaded');
+      thisRemove.style.display = 'none';
+    });
+  });
+})();
+"use strict";
+
 (function () {
   //range
   if (document.querySelector('.js-range')) {
@@ -16463,11 +16498,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         tabContentCur.style.display = 'block';
       } else if (windowWidth < 1200) {
         Array.prototype.forEach.call(tabContentAll, function (tabContentSlide, i) {
-          slideUp(tabContentSlide, 200);
+          slideUp(tabContentSlide, 500);
         });
         setTimeout(function () {
-          slideDown(tabContentCur, 200);
-        }, 200);
+          slideDown(tabContentCur, 500);
+        }, 500);
         var topPos = document.querySelector('.tabs-acc__items').offsetTop;
         scrollIt(topPos, 1000, 'easeOutQuad');
       }
