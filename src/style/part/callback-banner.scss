@@ -1,10 +1,15 @@
 .b-callback {
+    margin-bottom: 7rem;
     border-radius: 0.5rem;
     background-color: $color-green;
     display: flex;
     flex-flow: row wrap;
     overflow: hidden;
     color: $color-white;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     h1, h2, h3, h4 {
         color: $color-white;
