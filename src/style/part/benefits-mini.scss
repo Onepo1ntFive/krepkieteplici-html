@@ -1,0 +1,47 @@
+.b-benefits {
+    margin-bottom: 7rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @media (min-width: $breakpoint-tablet) {
+
+    }
+    @media (min-width: $breakpoint-desktop) {
+        background-color: $color-lightgray;
+        padding: 1.5rem;
+    }
+
+    .benefits__item {
+        margin-bottom: 1rem;
+        padding: 0.7rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: $color-lightgray;
+        font-weight: bold;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-bottom: 2rem;
+            width: calc(50% - 1rem);
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-bottom: 0;
+            padding: 0;
+            background-color: transparent;
+            border-left: 1px solid $color-gray2;
+            width: 25%;
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+
+        img {
+            vertical-align: middle;
+            padding-right: 1rem;
+        }
+    }
+}

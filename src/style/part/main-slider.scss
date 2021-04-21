@@ -1,0 +1,169 @@
+/*----------*/
+.b-slider-main {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-bottom: 7rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .slider-main__item {}
+    .slider-main__pic {
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 28rem;
+
+            @media (min-width: $breakpoint-tablet) {
+                border-radius: 0.5rem;
+            }
+            @media (min-width: $breakpoint-desktop) {
+                height: auto;
+            }
+        }
+    }
+    .slider-main__content {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        width: 90%;
+        text-align: center;
+        font-size: 1.7rem;
+        color: #fff;
+        
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 2.4rem;
+        }
+    }
+    .slider-main__title {
+        padding-bottom: 1rem;
+        font-weight: 700;
+        font-size: 3rem;
+        font-family: $font-family-slab;
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 6rem;
+        }
+    }
+    .slider-main__btn {
+        padding-top: 3rem;
+        margin: auto;
+        max-width: 26rem;
+    }
+}
+/*----------*/
+.swiper-container--main {
+    overflow: visible;
+
+    .swiper-slide {
+        opacity: 0.2;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .swiper-slide-visible {
+        opacity: 1;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.6rem;
+        background-color: $color-white;
+        border-radius: 100rem;
+        z-index: 2;
+        text-align: center;
+        box-shadow: 0px 0px 8px rgba(8, 35, 48, 0.24);
+        display: none;
+        cursor: pointer;
+        transition: box-shadow 0.2s ease-in-out;
+
+        @media (min-width: $breakpoint-desktop) {
+            width: 5rem;
+            height: 5rem;
+            line-height: 4.6rem;
+            display: block;
+        }
+
+        &:hover {
+            box-shadow: 0px 4px 8px rgba(8, 35, 48, 0.24);
+        }
+
+        svg {
+            vertical-align: middle;
+            width: 1.8rem;
+            height: 1.8rem;
+
+            @media (min-width: $breakpoint-desktop) {
+                width: auto;
+                height: auto;
+            }
+        }
+        path {
+            fill: $color-gray;
+            transition: fill 0.2s ease-in-out;
+        }
+
+        &:hover path {
+            fill: $color-green;
+        }
+    }
+    .swiper-button-prev {
+        left: -1.5rem;
+        @media (min-width: $breakpoint-desktop) {
+            left: -2.5rem;
+        }
+    }
+    .swiper-button-next {
+        right: -1.5rem;
+        @media (min-width: $breakpoint-desktop) {
+            right: -2.5rem;
+        }
+    }
+    .swiper-pagination {
+        padding-top: 1.5rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        @media (min-width: $breakpoint-desktop) {
+            position: absolute;
+            bottom: 3rem;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .swiper-pagination-bullet {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            display: block;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 100rem;
+            background: $color-gray;
+            opacity: 0.65;
+            transition-property: opacity, background;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+            cursor: pointer;
+
+            @media (min-width: $breakpoint-desktop) {
+                background: $color-white;
+            }
+        }
+        .swiper-pagination-bullet:hover,
+        .swiper-pagination-bullet-active {
+            background: $color-green;
+            opacity: 1;
+
+            @media (min-width: $breakpoint-desktop) {
+                background: $color-white;
+            }
+        }
+    }
+}
