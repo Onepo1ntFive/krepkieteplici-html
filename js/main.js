@@ -12686,6 +12686,36 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 "use strict";
 
 (function () {
+  var swiperCategoryCarousel = new Swiper('.swiper-container--category', {
+    loop: true,
+    watchSlidesVisibility: true,
+    loopAdditionalSlides: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      500: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 30
+      }
+    }
+  });
+})();
+"use strict";
+
+(function () {
   if (document.querySelectorAll('.js-count-input').length) {
     var countInputs = document.querySelectorAll('.js-count-input');
     Array.prototype.forEach.call(countInputs, function (el) {
@@ -12812,6 +12842,42 @@ function readURL(input) {
       });
     });
   }
+})();
+"use strict";
+
+(function () {
+  var swiperCatalogCarousel = new Swiper('.swiper-container--main', {
+    loop: true,
+    loopAdditionalSlides: 10,
+    watchSlidesVisibility: true,
+    spaceBetween: 100,
+    parallax: true,
+    freeMode: true,
+    freeModeSticky: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    autoplay: {
+      delay: 5000
+    },
+    speed: 1000,
+    breakpoints: {
+      0: {
+        spaceBetween: 10
+      },
+      768: {
+        spaceBetween: 20
+      },
+      1200: {
+        spaceBetween: 100
+      }
+    }
+  });
 })();
 "use strict";
 
