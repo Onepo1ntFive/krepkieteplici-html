@@ -1,86 +1,139 @@
 /*----------*/
 .b-product-gallery {
+    margin-bottom: 4rem;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
     text-align: center;
 
-    picture {
-        display: block;
-    }
-    img {
-        max-width: 100%;
-    }
+    picture {}
+    img {}
 
     .product-gallery__nav {
+        padding-left: 3rem;
+        padding-right: 3rem;
         position: relative;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        width: 10rem;
+        max-width: 100%;
+        order: 2;
+        
+        @media (min-width: $breakpoint-tablet) {
+            padding: 3rem 0;
+            width: 8rem;
+            order: 1;
+        }
     }
     .product-gallery__main {
-        padding-left: 2rem;
-        width: calc(100% - 10rem);
+        margin-bottom: 1rem;
+        border: 1px solid $color-gray;
+        border-radius: 0.5rem;
+        max-width: 100%;
+        order: 1;
+        
+        @media (min-width: $breakpoint-tablet) {
+            margin-bottom: 0;
+            margin-left: 2rem;
+            width: calc(100% - 10rem);
+            order: 2;
+        }
     }
 }
 /*----------*/
-.tns-btn {
-    position: absolute;
-    left: 50%;
-    padding: 1rem;
-    margin: -22px;
+.swiper-container--gallery-nav,
+.swiper-container--gallery {}
 
-    &--prev {
-        top: 0;
-    }
-    &--next {
-        bottom: 0;
-    }
-}
-.tns-slider {
+.swiper-container--gallery {
     height: 100%;
 
-    &--nav {
-        .tns-item {
-            padding: 2px;
-
-            img {
-                border: 1px solid $color-gray;
-                border-radius: 0.5rem;
-                transition-property: border-color, box-shadow;
-                transition-duration: 0.2s;
-                transition-timing-function: ease-in-out;
-                cursor: pointer;
-            }
-
-            &:hover {
-                img {
-                    border-color: $color-green;
-                }
-            }
-
-            &-current {
-                img {
-                    box-shadow: 0 0 0 1px $color-green;
-                    border-color: $color-green;
-                }
-            }
-        }
-        .swiper-button-prev,
-        .swiper-button-next {
-            position: absolute;
-            left: 50%;
-            margin-left: -12px;
-        }
-        .swiper-button-prev {
-            top: 0;
-        }
-        .swiper-button-next {
-            bottom: 0;
+    .swiper-slide {
+        img {
+            max-width: 100%;
         }
     }
-    &--main {
-        border: 1px solid $color-gray;
-        border-radius: 0.5rem;
+}
+.swiper-container--gallery-nav {
+    position: static;
+    box-sizing: border-box;
+    width: 100%;
+    
+    @media (min-width: $breakpoint-tablet) {
+        height: 45rem;
+    }
+
+    .swiper-slide {
+        padding: 0.1rem;
+
+        picture {}
+        img {
+            padding: 0.2rem;
+            height: 100%;
+            width: 100%;
+            border: 1px solid $color-gray;
+            border-radius: 0.5rem;
+            box-shadow: none;
+            transition-property: border-color, box-shadow;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+            cursor: pointer;
+            object-fit: contain;
+        }
+
+        &:hover {
+            img {
+                border-color: $color-green;
+            }
+        }
+    }
+    .swiper-slide-active {
+        img {
+            border-color: $color-green;
+            box-shadow: 0 0 0 1px $color-green
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        margin-top: -1.5rem;
+        top: 50%;
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        line-height: 2.5rem;
+        cursor: pointer;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 0;
+            margin-left: -1.5rem;
+            top: auto;
+        }
+
+        path {
+            fill: $color-gray2;
+            transition: fill 0.2s ease-in-out;
+        }
+
+        &:hover {
+            path {
+                fill: $color-green
+            }
+        }
+    }
+    .swiper-button-prev {
+        left: 0;
+        transform: rotate(-90deg);
+
+        @media (min-width: $breakpoint-tablet) {
+            top: 0;
+            left: 50%;
+            transform: none;
+        }
+    }
+    .swiper-button-next {
+        right: 0;
+        transform: rotate(90deg);
+        
+        @media (min-width: $breakpoint-tablet) {
+            bottom: 0;
+            right: auto;
+            left: 50%;
+            transform: rotate(180deg);
+        }
     }
 }
