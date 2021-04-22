@@ -12641,47 +12641,41 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 })();
 "use strict";
 
-(function () {// const tinySliderNav = tns({
-  //     container: '.js-tiny-nav',
-  //     nav: false,
-  //     controls: false,
-  //     axis: 'vertical',
-  //     items: 5,
-  //     slideBy: 1,
-  //     mouseDrag: true,
-  //     loop: true,
-  //     center: true,
-  //     onInit: (info) => {
-  //         // console.log(info);
-  //         info.slideItems[info.index].classList.add('tns-item-current');
-  //     }
-  // });
-  // const tinySliderMain = tns({
-  //     container: '.js-tiny-main',
-  //     nav: false,
-  //     controls: false,
-  //     axis: 'vertical',
-  //     slideBy: 1,
-  //     mouseDrag: false,
-  //     loop: true,
-  //     touch: false,
-  //     center: true,
-  //     onInit: (info) => {
-  //         console.log(info);
-  //         info.slideItems[info.index].classList.add('tns-item-current');
-  //     }
-  // });
-  // tinySliderNav.events.on('indexChanged', (info) => {
-  //     console.log(tinySliderNav.getInfo(), tinySliderMain.getInfo())
-  // });
-  // tinySliderNav.events.on("transitionEnd", function (info) {
-  //     info.slideItems[info.indexCached].classList.remove('tns-item-current');
-  //     info.slideItems[info.index].classList.add('tns-item-current');
-  // });
-  // tinySliderMain.events.on("transitionEnd", function (info) {
-  //     info.slideItems[info.indexCached].classList.remove('tns-item-current');
-  //     info.slideItems[info.index].classList.add('tns-item-current');
-  // });
+(function () {
+  var galleryTop = new Swiper('.swiper-container--gallery', {
+    spaceBetween: 30,
+    loop: true,
+    loopedSlides: 4,
+    slidesPerView: 1
+  });
+  var galleryThumbs = new Swiper('.swiper-container--gallery-nav', {
+    spaceBetween: 10,
+    direction: 'vertical',
+    centeredSlides: true,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    loop: true,
+    loopedSlides: 4,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      0: {
+        direction: 'horizontal',
+        slidesPerView: 4
+      },
+      500: {
+        slidesPerView: 5
+      },
+      768: {
+        direction: 'vertical',
+        slidesPerView: 5
+      }
+    }
+  });
+  galleryTop.controller.control = galleryThumbs;
+  galleryThumbs.controller.control = galleryTop;
 })();
 "use strict";
 
