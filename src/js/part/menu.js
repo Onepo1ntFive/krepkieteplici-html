@@ -10,6 +10,8 @@
     let hasChilds = document.querySelectorAll('.js-menutop-haschild');
     Array.prototype.forEach.call(hasChilds, function (hasChild, i) {
         hasChild.addEventListener('mouseenter', (event) => {
+            let windowWidth = window.innerWidth;
+
             if (windowWidth >= 768) {
                 let thisChild = event.target;
 
@@ -31,6 +33,7 @@
         });
 
         hasChild.addEventListener('mouseleave', (event) => {
+            let windowWidth = window.innerWidth;
             if (windowWidth >= 768) {
                 let thisChild = event.target;
 
