@@ -12879,6 +12879,8 @@ function readURL(input) {
   var hasChilds = document.querySelectorAll('.js-menutop-haschild');
   Array.prototype.forEach.call(hasChilds, function (hasChild, i) {
     hasChild.addEventListener('mouseenter', function (event) {
+      var windowWidth = window.innerWidth;
+
       if (windowWidth >= 768) {
         var thisChild = event.target;
         $menutopListWrap = thisChild.parentNode.parentNode;
@@ -12897,6 +12899,8 @@ function readURL(input) {
       }
     });
     hasChild.addEventListener('mouseleave', function (event) {
+      var windowWidth = window.innerWidth;
+
       if (windowWidth >= 768) {
         var thisChild = event.target;
         $menutopListWrap = thisChild.parentNode.parentNode;
