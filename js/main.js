@@ -12846,8 +12846,6 @@ function readURL(input) {
     watchSlidesVisibility: true,
     spaceBetween: 100,
     parallax: true,
-    freeMode: true,
-    freeModeSticky: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
@@ -12870,6 +12868,50 @@ function readURL(input) {
       1200: {
         spaceBetween: 100
       }
+    }
+  });
+})();
+"use strict";
+
+(function () {
+  //top menu
+  var $menutopList, $menutopListWrap, $menutopListParent, menutopListHeight, menutopListParent, windowWidth;
+  var hasChilds = document.querySelectorAll('.js-menutop-haschild');
+  Array.prototype.forEach.call(hasChilds, function (hasChild, i) {
+    hasChild.addEventListener('mouseenter', function (event) {
+      if (windowWidth >= 768) {
+        var thisChild = event.target;
+        $menutopListWrap = thisChild.parentNode.parentNode;
+        $menutopListParent = thisChild.parentNode;
+        $menutopList = thisChild.querySelector('.js-menutop-child');
+        menutopListParent = $menutopListParent.offsetHeight;
+        menutopListHeight = $menutopList.offsetHeight;
+
+        if (menutopListParent > menutopListHeight) {
+          $menutopListWrap.style.height = menutopListParent + 'px';
+        } else {
+          $menutopListWrap.style.height = menutopListHeight + 'px';
+        }
+
+        $menutopListWrap.classList.add("menu__level-wrap--full");
+      }
+    });
+    hasChild.addEventListener('mouseleave', function (event) {
+      if (windowWidth >= 768) {
+        var thisChild = event.target;
+        $menutopListWrap = thisChild.parentNode.parentNode;
+        $menutopListWrap.style.height = 'auto';
+        $menutopListWrap.classList.remove("menu__level-wrap--full");
+      }
+    });
+  });
+  var menuOpen = document.querySelector('.js-menu-open');
+  var menuBlock = document.querySelector('.js-menu');
+  menuOpen.addEventListener('click', function () {
+    if (menuBlock.classList.contains('active')) {
+      menuBlock.classList.remove('active');
+    } else {
+      menuBlock.classList.add('active');
     }
   });
 })();
