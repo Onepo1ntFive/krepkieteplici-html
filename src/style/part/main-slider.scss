@@ -5,11 +5,9 @@
     margin-bottom: 7rem;
 
     @media (min-width: $breakpoint-tablet) {
+        margin-top: -2rem;
         margin-left: 0;
         margin-right: 0;
-    }
-    @media (min-width: $breakpoint-desktop) {
-        margin-top: -2rem;
     }
 
     .slider-main__item {}
