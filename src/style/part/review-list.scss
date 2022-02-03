@@ -18,14 +18,14 @@
             padding-left: 2rem;
             display: inline-block;
             font-size: 3.8rem;
-            font-family: $font-family-slab;
+            font-family: $font-family;
             font-weight: bold;
             line-height: 1;
         }
     }
     .reviews__total-of {
         font-size: 1.8rem;
-        font-family: $font-family-slab;
+        font-family: $font-family;
         font-weight: bold;
     }
     .reviews__total-photos {
@@ -87,7 +87,7 @@
         }
     }
     .reviews__name {
-        font-family: $font-family-slab;
+        font-family: $font-family;
         font-weight: bold;
         color: $color-font;
     }

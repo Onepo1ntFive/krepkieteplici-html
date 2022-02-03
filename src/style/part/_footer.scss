@@ -25,7 +25,7 @@
     }
 
     h4 {
-        font-family: $font-family-slab;
+        font-family: $font-family;
         font-size: 2rem;
     }
 
@@ -118,7 +118,7 @@
         width: 100%;
         display: flex;
         flex-flow: row wrap;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         font-size: 1.4rem;
         color: $color-font-gray;

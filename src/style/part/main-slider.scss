@@ -41,9 +41,10 @@
     }
     .slider-main__title {
         padding-bottom: 1rem;
+        text-transform: uppercase;
         font-weight: 700;
         font-size: 3rem;
-        font-family: $font-family-slab;
+        font-family: $font-family;
 
         @media (min-width: $breakpoint-desktop) {
             font-size: 6rem;

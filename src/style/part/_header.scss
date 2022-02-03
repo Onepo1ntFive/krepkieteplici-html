@@ -1,7 +1,7 @@
 /*----------*/
 .b-head-line {
-    margin: 0 -3000px;
-    padding: 0 3000px;
+    margin: 0 -300rem 1.5rem;
+    padding: 1rem 300rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -11,16 +11,18 @@
 /*----------*/
 .b-head-menu {
     a {
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-        padding-left: 3rem;
+        padding: 0.4rem 2.4rem;
         display: inline-block;
         text-decoration: none;
+        font-weight: 500;
         font-size: 1.5rem;
-        color: $color-font;
+        border-left: 2px solid $color-green;
+        text-transform: uppercase;
+        color: $color-black;
         transition: color 0.2s ease-in-out;
 
         &:first-child {
+            border-left: 0;
             padding-left: 0;
         }
     }
@@ -31,6 +33,8 @@
 }
 /*----------*/
 .b-icons-social {
+    font-size: 0;
+
     img {
         opacity: 1;
         background-color: $color-gray;
@@ -73,20 +77,20 @@
         min-height: 11rem;
     }
     @media (min-width: $breakpoint-desktop) {
-        min-height: 15rem;
+        min-height: 16.5rem;
     }
 
     .head__contacts {
         position: relative;
-        
+
         @media (min-width: $breakpoint-tablet) {
             padding-left: 6rem;
         }
 
-        a[href^="tel:"] {
+        a[href^='tel:'] {
             font-size: 2.5rem;
-            font-family: $font-family-slab;
             font-weight: bold;
+            line-height: 1;
             color: $color-font;
             text-decoration: none;
             transition: color 0.2s ease-in-out;
@@ -113,11 +117,11 @@
                 }
             }
         }
-        a[href^="tel:"]:hover {
+        a[href^='tel:']:hover {
             text-decoration: none;
             color: $color-green;
         }
-        a[href^="mailto:"] {
+        a[href^='mailto:'] {
             display: none;
             text-decoration: none;
             font-size: 1.4rem;
@@ -129,7 +133,7 @@
                 display: inline-block;
             }
         }
-        a[href^="mailto:"]:hover {
+        a[href^='mailto:']:hover {
             border-bottom-color: $color-green;
             text-decoration: none;
         }
@@ -140,13 +144,18 @@
         top: 50%;
         transform: translate(-50%, -50%);
 
-        img {
-            display: inline-block;
-            vertical-align: middle;
+        picture {
+            display: block;
             max-width: 11rem;
 
             @media (min-width: $breakpoint-desktop) {
-                max-width: none;
+                max-width: 24rem;
+            }
+
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 100%;
             }
         }
     }
@@ -162,14 +171,13 @@
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
-               
             }
         }
         a {
             position: relative;
             display: inline-block;
             text-decoration: none;
-            
+
             @media (min-width: $breakpoint-tablet) {
                 padding-left: 6rem;
             }
@@ -183,7 +191,7 @@
         }
         .head-cart__title {
             display: none;
-            font-family: $font-family-slab;
+            font-family: $font-family;
             font-weight: bold;
             font-size: 2.5rem;
             color: $color-font;
