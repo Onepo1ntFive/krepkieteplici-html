@@ -117,10 +117,25 @@
         padding-top: 2rem;
         margin-left: auto;
         width: 100%;
+        position: fixed;
+        z-index: 997;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem;
 
         @media (min-width: $breakpoint-tablet) {
             padding-top: 0;
             max-width: 26rem;
+            position: static;
+        }
+
+        & > a {
+            width: 100%;
+
+            @media (min-width: $breakpoint-tablet) {
+                width: 30rem;
+            }
         }
     }
 }

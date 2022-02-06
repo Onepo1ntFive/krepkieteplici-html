@@ -8,6 +8,10 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+          },
         breakpoints: {
             0: {
                 slidesPerView: 1,
@@ -16,7 +20,7 @@
                 slidesPerView: 2,
             },
             768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
             1200: {
                 slidesPerView: 3,

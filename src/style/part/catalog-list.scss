@@ -275,6 +275,29 @@
             right: -2.5rem;
         }
     }
+    .swiper-pagination {
+        padding-top: 3rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        @media (min-width: $breakpoint-desktop) {
+            display: none;
+        }
+
+        &-bullet {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 100rem;
+            background-color: $color-gray;
+
+            &-active {
+                background-color: $color-green;
+            }
+        }
+    }
 }
 /*----------*/
 /*----------*/
