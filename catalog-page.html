@@ -15,12 +15,9 @@
             <div class="b-head-line hide-on-mobile hide-on-tablet">
                 <nav class="b-head-menu">
                     <a href="#">О компании</a>
-                    <a href="#">Оплата и доставка</a>
-                    <a href="#">Гарантии</a>
-                    <a href="#">Дилерам</a>
-                    <a href="#">Акции и новости</a>
+                    <a href="#">Покупателям</a>
+                    <a href="#">Акции</a>
                     <a href="#">Контакты</a>
-                    <a href="#">Декларации</a>
                 </nav>
                 <div class="b-icons-social">
                     <a href="#"><img src="./img/icon-facebook.svg" alt="facebook"></a>
@@ -43,7 +40,11 @@
                     </div>
                 </div>
                     <a class="head__logo" href="/">
-                        <img src="./img/main-logo.svg" alt="">
+                        <picture>
+                            <source srcset='./img/main-logo.webp' type='image/webp'>
+                            <source srcset='./img/main-logo.png' type='image/png'>
+                            <img src='./img/main-logo.png' alt=''>
+                        </picture>
                     </a>
                 <div class="head__cart">
                     <div class="b-head-cart">
@@ -147,107 +148,234 @@
 
         <section class="l-content">
             <div class="content__wrap">
-                <h1>Теплицы из поликарбоната</h1>
-                <div class="b-minifilter">
-                    <a href="#">Для огурцов <ins>(5)</ins></a>
-                    <a href="#">Название тега <ins>(44)</ins></a>
-                    <a href="#">Очень длинное название тега <ins>(3)</ins></a>
+                <div class="content">
+                    <h1>Теплицы из поликарбоната</h1>
+                    <p>В компании «Смоленская Фабрика Теплиц» вы можете недорого купить теплицу из поликарбоната с установкой в Смоленске. Конструкции надежно защищены от коррозии, способны выдержать большую снеговую нагрузку — они полностью оправдают вложенные средства годами безупречной службы и обильным урожаем.</p>
                 </div>
-                <div class="b-catalog-wrap">
-                    <div class="catalog-wrap__filter">
-                        <div class="b-filter-btn">
-                            <span class="js-filter-show">Фильтр <img src="./img/icon-filter.svg" alt=""></span>
-                        </div>
-                        <div class="b-filter-fixed-bg js-filter-bg js-filter-close"></div>
-                        <div class="b-filter-fixed js-filter-block">
-                            <div class="filter-fixed__title"> 
-                                Фильтр <span class="filter-fixed__close js-filter-close"><img src="./img/cross.svg" alt=""></span>
+
+                <div class="b-filter-btn">
+                    <span class="js-filter-show">Все фильтры <img src="./img/icon-filter.svg" alt=""></span>
+                </div>
+                <div class="b-filter-wrap js-filter-wrap">
+                    <div class="filter-wrap__inner js-filter-wrap-inner">
+                        <div class="filter-wrap__content">
+                            <div class="b-filter-fixed js-filter-block">
+                                <div class="filter-fixed__title"> Фильтр <span class="filter-fixed__close js-filter-close"><img src="./img/cross.svg" alt=""></span>
+                                </div>
+                                <div class="filter-fixed__content">
+                                    <div class="b-filter js-filter">
+                                        <div class="filter__inner">
+                                            <div class="filter__collapse js-collapse">
+                                                <div class="filter__title js-collapse-title">Сортировать</div>
+                                                <div class="filter__content">
+                                                    <div class="filter__items">
+                                                        <div class="filter__item filter__item--radio">
+                                                            <div class="b-inputbox b-inputbox--radio">
+                                                                <input type="radio" name="radio-1" id="radio-1">
+                                                                <label class="inputbox__input" for="radio-1"></label>
+                                                                <label class="inputbox__label" for="radio-1">По умолчанию</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__item filter__item--radio">
+                                                            <div class="b-inputbox b-inputbox--radio">
+                                                                <input type="radio" name="radio-1" id="radio-2">
+                                                                <label class="inputbox__input" for="radio-2"></label>
+                                                                <label class="inputbox__label" for="radio-2">По уменьшению цены</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__item filter__item--radio">
+                                                            <div class="b-inputbox b-inputbox--radio">
+                                                                <input type="radio" name="radio-1" id="radio-3">
+                                                                <label class="inputbox__input" for="radio-3"></label>
+                                                                <label class="inputbox__label" for="radio-3">По возрастанию цены</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filter__collapse js-collapse">
+                                                <div class="filter__title js-collapse-title">Цена</div>
+                                                <div class="filter__content">
+                                                    <div class="filter__range js-range">
+                                                        <input type="text" class="js-range-min"><span>&mdash;</span><input type="text" class="js-range-max">
+                                                        <div class="filter__range-slider">
+                                                            <div class="js-range-slider"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filter__collapse js-collapse">
+                                                <div class="filter__title js-collapse-title">Ширина теплицы</div>
+                                                <div class="filter__content">
+                                                    <div class="filter__items">
+                                                        <div class="filter__item filter__item--checkbox">
+                                                            <div class="b-inputbox b-inputbox--checkbox">
+                                                                <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                                                                <label class="inputbox__input" for="checkbox-1"></label>
+                                                                <label class="inputbox__label" for="checkbox-1">4,0 метра</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__item filter__item--checkbox">
+                                                            <div class="b-inputbox b-inputbox--checkbox">
+                                                                <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                                                                <label class="inputbox__input" for="checkbox-2"></label>
+                                                                <label class="inputbox__label" for="checkbox-2">3 метра</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__item filter__item--checkbox">
+                                                            <div class="b-inputbox b-inputbox--checkbox">
+                                                                <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                                                                <label class="inputbox__input" for="checkbox-3"></label>
+                                                                <label class="inputbox__label" for="checkbox-3">3 метра</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filter__collapse js-collapse">
+                                                <div class="filter__title js-collapse-title">Шаг между дугами</div>
+                                                <div class="filter__content">
+                                                    <div class="filter__items">
+                                                        <div class="filter__item filter__item--checkbox">
+                                                            <div class="b-inputbox b-inputbox--checkbox">
+                                                                <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                                                                <label class="inputbox__input" for="checkbox-4"></label>
+                                                                <label class="inputbox__label" for="checkbox-4">1 метр</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__item filter__item--checkbox">
+                                                            <div class="b-inputbox b-inputbox--checkbox">
+                                                                <input type="checkbox" name="checkbox-5" id="checkbox-5">
+                                                                <label class="inputbox__input" for="checkbox-5"></label>
+                                                                <label class="inputbox__label" for="checkbox-5">65 см</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filter__item filter__item--checkbox">
+                                                            <div class="b-inputbox b-inputbox--checkbox">
+                                                                <input type="checkbox" name="checkbox-6" id="checkbox-6">
+                                                                <label class="inputbox__input" for="checkbox-6"></label>
+                                                                <label class="inputbox__label" for="checkbox-6">3 метра</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filter__all">
+                                                <div class="filter__title js-filter-desktop-show">Все фильтры <img src="./img/icon-filter.svg" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__btns">
+                                            <div class="filter__reset">
+                                                <span>Очистить всё <img src="./img/spin.svg" alt=""></span>
+                                            </div>
+                                            <div class="filter__submit">
+                                                <span>Применить</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="b-filter js-filter">
+                        </div>
+                    </div>
+                </div>
+                <div class="b-filter-desktop js-filter-desktop">
+                    <div class="filter-desktop__inner">
+                        <div class="filter-desktop__title"> Фильтр <span class="filter-desktop__close js-filter-desktop-close"><img src="./img/cross.svg" alt=""></span>
+                        </div>
+                        <div class="filter-desktop__filter">
+                            <div class="b-filter b-filter--desktop">
                                 <div class="filter__inner">
-                                    <div class="filter__collapse js-collapse">
-                                        <div class="filter__title js-collapse-title">Сортировать</div>
-                                        <div class="filter__items js-collapse-content">
-                                            <div class="filter__item filter__item--radio">
-                                                <div class="b-inputbox b-inputbox--radio">
-                                                    <input type="radio" name="radio-1" id="radio-1">
-                                                    <label class="inputbox__input" for="radio-1"></label>
-                                                    <label class="inputbox__label" for="radio-1">По умолчанию</label>
+                                    <div class="filter__collapse">
+                                        <div class="filter__title ">Сортировать</div>
+                                        <div class="filter__content">
+                                            <div class="filter__items">
+                                                <div class="filter__item filter__item--radio">
+                                                    <div class="b-inputbox b-inputbox--radio">
+                                                        <input type="radio" name="radio-1" id="radio-7">
+                                                        <label class="inputbox__input" for="radio-7"></label>
+                                                        <label class="inputbox__label" for="radio-7">По умолчанию</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="filter__item filter__item--radio">
-                                                <div class="b-inputbox b-inputbox--radio">
-                                                    <input type="radio" name="radio-1" id="radio-2">
-                                                    <label class="inputbox__input" for="radio-2"></label>
-                                                    <label class="inputbox__label" for="radio-2">По уменьшению цены</label>
+                                                <div class="filter__item filter__item--radio">
+                                                    <div class="b-inputbox b-inputbox--radio">
+                                                        <input type="radio" name="radio-1" id="radio-8">
+                                                        <label class="inputbox__input" for="radio-8"></label>
+                                                        <label class="inputbox__label" for="radio-8">По уменьшению цены</label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="filter__item filter__item--radio">
-                                                <div class="b-inputbox b-inputbox--radio">
-                                                    <input type="radio" name="radio-1" id="radio-3">
-                                                    <label class="inputbox__input" for="radio-3"></label>
-                                                    <label class="inputbox__label" for="radio-3">По возрастанию цены</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filter__collapse js-collapse">
-                                        <div class="filter__title js-collapse-title">Цена</div>
-                                        <div class="filter__range js-collapse-content js-range">
-                                            <input type="text" class="js-range-min"><span>&mdash;</span><input type="text" class="js-range-max">
-                                            <div class="filter__range-slider">
-                                                <div class="js-range-slider"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filter__collapse js-collapse">
-                                        <div class="filter__title js-collapse-title">Ширина теплицы</div>
-                                        <div class="filter__items js-collapse-content">
-                                            <div class="filter__item filter__item--checkbox">
-                                                <div class="b-inputbox b-inputbox--checkbox">
-                                                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                                                    <label class="inputbox__input" for="checkbox-1"></label>
-                                                    <label class="inputbox__label" for="checkbox-1">4,0 метра</label>
-                                                </div>
-                                            </div>
-                                            <div class="filter__item filter__item--checkbox">
-                                                <div class="b-inputbox b-inputbox--checkbox">
-                                                    <input type="checkbox" name="checkbox-2" id="checkbox-2">
-                                                    <label class="inputbox__input" for="checkbox-2"></label>
-                                                    <label class="inputbox__label" for="checkbox-2">3 метра</label>
-                                                </div>
-                                            </div>
-                                            <div class="filter__item filter__item--checkbox">
-                                                <div class="b-inputbox b-inputbox--checkbox">
-                                                    <input type="checkbox" name="checkbox-3" id="checkbox-3">
-                                                    <label class="inputbox__input" for="checkbox-3"></label>
-                                                    <label class="inputbox__label" for="checkbox-3">3 метра</label>
+                                                <div class="filter__item filter__item--radio">
+                                                    <div class="b-inputbox b-inputbox--radio">
+                                                        <input type="radio" name="radio-1" id="radio-9">
+                                                        <label class="inputbox__input" for="radio-9"></label>
+                                                        <label class="inputbox__label" for="radio-9">По возрастанию цены</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="filter__collapse js-collapse">
-                                        <div class="filter__title js-collapse-title">Шаг между дугами</div>
-                                        <div class="filter__items js-collapse-content">
-                                            <div class="filter__item filter__item--checkbox">
-                                                <div class="b-inputbox b-inputbox--checkbox">
-                                                    <input type="checkbox" name="checkbox-4" id="checkbox-4">
-                                                    <label class="inputbox__input" for="checkbox-4"></label>
-                                                    <label class="inputbox__label" for="checkbox-4">1 метр</label>
+                                    <div class="filter__collapse">
+                                        <div class="filter__title ">Цена</div>
+                                        <div class="filter__content">
+                                            <div class="filter__range js-range">
+                                                <input type="text" class="js-range-min"><span>&mdash;</span><input type="text" class="js-range-max">
+                                                <div class="filter__range-slider">
+                                                    <div class="js-range-slider"></div>
                                                 </div>
                                             </div>
-                                            <div class="filter__item filter__item--checkbox">
-                                                <div class="b-inputbox b-inputbox--checkbox">
-                                                    <input type="checkbox" name="checkbox-5" id="checkbox-5">
-                                                    <label class="inputbox__input" for="checkbox-5"></label>
-                                                    <label class="inputbox__label" for="checkbox-5">65 см</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__collapse">
+                                        <div class="filter__title ">Ширина теплицы</div>
+                                        <div class="filter__content">
+                                            <div class="filter__items">
+                                                <div class="filter__item filter__item--checkbox">
+                                                    <div class="b-inputbox b-inputbox--checkbox">
+                                                        <input type="checkbox" name="checkbox-14" id="checkbox-14">
+                                                        <label class="inputbox__input" for="checkbox-14"></label>
+                                                        <label class="inputbox__label" for="checkbox-14">4,0 метра</label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item filter__item--checkbox">
+                                                    <div class="b-inputbox b-inputbox--checkbox">
+                                                        <input type="checkbox" name="checkbox-5" id="checkbox-5">
+                                                        <label class="inputbox__input" for="checkbox-15"></label>
+                                                        <label class="inputbox__label" for="checkbox-15">3 метра</label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item filter__item--checkbox">
+                                                    <div class="b-inputbox b-inputbox--checkbox">
+                                                        <input type="checkbox" name="checkbox-16" id="checkbox-16">
+                                                        <label class="inputbox__input" for="checkbox-16"></label>
+                                                        <label class="inputbox__label" for="checkbox-16">3 метра</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="filter__item filter__item--checkbox">
-                                                <div class="b-inputbox b-inputbox--checkbox">
-                                                    <input type="checkbox" name="checkbox-6" id="checkbox-6">
-                                                    <label class="inputbox__input" for="checkbox-6"></label>
-                                                    <label class="inputbox__label" for="checkbox-6">3 метра</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__collapse">
+                                        <div class="filter__title ">Шаг между дугами</div>
+                                        <div class="filter__content">
+                                            <div class="filter__items">
+                                                <div class="filter__item filter__item--checkbox">
+                                                    <div class="b-inputbox b-inputbox--checkbox">
+                                                        <input type="checkbox" name="checkbox-7" id="checkbox-7">
+                                                        <label class="inputbox__input" for="checkbox-7"></label>
+                                                        <label class="inputbox__label" for="checkbox-7">1 метр</label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item filter__item--checkbox">
+                                                    <div class="b-inputbox b-inputbox--checkbox">
+                                                        <input type="checkbox" name="checkbox-8" id="checkbox-8">
+                                                        <label class="inputbox__input" for="checkbox-8"></label>
+                                                        <label class="inputbox__label" for="checkbox-8">65 см</label>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__item filter__item--checkbox">
+                                                    <div class="b-inputbox b-inputbox--checkbox">
+                                                        <input type="checkbox" name="checkbox-9" id="checkbox-9">
+                                                        <label class="inputbox__input" for="checkbox-9"></label>
+                                                        <label class="inputbox__label" for="checkbox-9">3 метра</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -255,7 +383,7 @@
                                 </div>
                                 <div class="filter__btns">
                                     <div class="filter__reset">
-                                        <span>Очистить всё <img src="./img/spin.svg" alt=""></span>
+                                        <span>Очистить всё</span>
                                     </div>
                                     <div class="filter__submit">
                                         <span>Применить</span>
@@ -264,6 +392,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="b-filter-fixed-bg js-filter-bg js-filter-close"></div>
+
+                <div class="b-minifilter">
+                    <span>По популярности <ins>&times;</ins></span>
+                    <span>6 500 – 18 000 руб. <ins>&times;</ins></span>
+                    <div class="minifilter__reset">
+                        <span>Очистить всё <img src="./img/spin-gray.svg" alt=""></span>
+                    </div>
+                </div>
+                <div class="b-catalog-wrap">
                     <div class="catalog-wrap__catalog">
                         <div class="b-catalog-list">
                             <div class="catalog-list__items">
@@ -307,6 +446,43 @@
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
                                     </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--  -->
                                 <div class="catalog-list__item">
@@ -347,6 +523,43 @@
                                         <div class="catalog-list__price"> 18 000 <span class="b-ruble-font">Р</span>
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
+                                    </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -390,6 +603,43 @@
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
                                     </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--  -->
                                 <div class="catalog-list__item">
@@ -430,6 +680,43 @@
                                         <div class="catalog-list__price"> 18 000 <span class="b-ruble-font">Р</span>
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
+                                    </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -473,6 +760,43 @@
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
                                     </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--  -->
                                 <div class="catalog-list__item">
@@ -513,6 +837,43 @@
                                         <div class="catalog-list__price"> 18 000 <span class="b-ruble-font">Р</span>
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
+                                    </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -556,6 +917,43 @@
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
                                     </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--  -->
                                 <div class="catalog-list__item">
@@ -596,6 +994,43 @@
                                         <div class="catalog-list__price"> 18 000 <span class="b-ruble-font">Р</span>
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
+                                    </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -639,6 +1074,43 @@
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
                                     </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--  -->
                                 <div class="catalog-list__item">
@@ -679,6 +1151,43 @@
                                         <div class="catalog-list__price"> 18 000 <span class="b-ruble-font">Р</span>
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
+                                    </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
                                     </div>
                                 </div>
                                 <!--  -->
@@ -722,6 +1231,43 @@
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
                                     </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!--  -->
                                 <div class="catalog-list__item">
@@ -751,20 +1297,57 @@
                                             </div>
                                         </div>
                                         <div class="catalog-list__assembly">
-                                            <label for="build-4">Сборка</label>
+                                            <label for="build-3">Сборка</label>
                                             <div class="b-checkbox">
-                                                <input type="checkbox" name="build" id="build-4">
-                                                <label for="build-4"></label>
+                                                <input type="checkbox" name="build" id="build-3">
+                                                <label for="build-3"></label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="catalog-list__footer">
-                                        <div class="catalog-list__price"> 18 000 <span class="b-ruble-font">Р</span>
+                                        <div class="catalog-list__price">
+                                            <div class="catalog-list__price-oldprice">22 650 <span class="b-ruble-font">Р</span></div> 18 000 <span class="b-ruble-font">Р</span>
                                         </div>
                                         <a class="catalog-list__buy" href="#"><img src="./img/icon-cart.svg" alt="Купить"></a>
                                     </div>
+                                    <div class="catalog-list__params">
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-type.svg" alt="">
+                                            <span>Форма</span>
+                                            <ins>Арочная</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-height.svg" alt="">
+                                            <span>Высота</span>
+                                            <ins>2 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-width.svg" alt="">
+                                            <span>Ширина</span>
+                                            <ins>3 м.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-length.svg" alt="">
+                                            <span>Длина</span>
+                                            <ins>4 м./6 м./8 м./10 м. <br> <a href="#">Хочу теплицу длиннее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-plenka.svg" alt="">
+                                            <span>СПК</span>
+                                            <ins>Толщина 4 мм., плотность 0,52 кг./м2 <br> <a href="#">Хочу плотнее</a></ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-arch.svg" alt="">
+                                            <span>Каркас</span>
+                                            <ins>Оцинкованная профтруба 20*20 мм.</ins>
+                                        </div>
+                                        <div class="catalog-list__param">
+                                            <img src="./img/catalog-param-archstep.svg" alt="">
+                                            <span>Шаг дуг</span>
+                                            <ins>1 м.</ins>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!--  -->
                             </div>
                         </div>
                         <div class="b-pagination hide-on-mobile hide-on-tablet">
@@ -785,34 +1368,6 @@
                                 </svg>
                             </a>
                         </div>
-                    </div>
-                </div>
-
-                <div class="b-video">
-                    <div class="video__content">
-                        <h2>Теплицы из поликарбоната</h2>
-                        <p>В компании «Смоленская Фабрика Теплиц» вы можете недорого купить теплицу из поликарбоната с установкой в Смоленске. Конструкции надежно защищены от коррозии, способны выдержать большую снеговую нагрузку — они полностью оправдают вложенные средства годами безупречной службы и обильным урожаем.</p>
-                    </div>
-                    <div class="video__pic">
-                        <a href="#">
-                            <img src="./img/icon-play.svg" alt="" class="video__play">
-                            <picture>
-                                <source srcset='./img/video-pic.webp' type='image/webp'>
-                                <source srcset='./img/video-pic.png' type='image/png'>
-                                <img src='./img/video-pic.png' alt=''>
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-                <div class="b-callback">
-                    <picture class="callback__pic">
-                        <source srcset='./img/callback-pic.webp' type='image/webp'>
-                        <source srcset='./img/callback-pic.png' type='image/png'>
-                        <img src='./img/callback-pic.png' alt=''>
-                    </picture>
-                    <div class="callback__content">
-                        <h2>Eсть вопросы?</h2>
-                        <p>Если у вас есть вопросы к нашим специалистам, мы будем рады проконсультировать вас по телефону <a href="tel:88003021602">8 800 302 16 02</a> или электронной почте <a href="mailto:smol.ft@yandex.ru">smol.ft@yandex.ru</a></p>
                     </div>
                 </div>
             </div>
