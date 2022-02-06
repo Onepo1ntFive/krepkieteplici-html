@@ -1,0 +1,17 @@
+.b-ads {
+    margin-bottom: 5rem;
+    
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 10rem;
+    }
+
+    a, a:hover {
+        display: block;
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+}

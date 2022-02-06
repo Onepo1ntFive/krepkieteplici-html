@@ -96,19 +96,21 @@
     }
 
     // sticky filter
-    function fixFilter() {
-        const filterFixWrap = document.querySelector('.js-filter-wrap');
-        const filterFixInner = document.querySelector('.js-filter-wrap-inner');
-        let filterFixWrapTop = filterFixWrap.getBoundingClientRect().top + window.pageYOffset;
-        let windowScrollTop = window.pageYOffset;
-        
-        if (filterFixWrapTop <= windowScrollTop) {
-            filterFixWrap.classList.add('active');
-        } else {
-            filterFixWrap.classList.remove('active');
-        }
-    }
+    if (document.querySelector('.js-filter-wrap')) {
+        function fixFilter() {
+            const filterFixWrap = document.querySelector('.js-filter-wrap');
+            const filterFixInner = document.querySelector('.js-filter-wrap-inner');
+            let filterFixWrapTop = filterFixWrap.getBoundingClientRect().top + window.pageYOffset;
+            let windowScrollTop = window.pageYOffset;
 
-    fixFilter()
-    window.addEventListener('scroll', fixFilter);
+            if (filterFixWrapTop <= windowScrollTop) {
+                filterFixWrap.classList.add('active');
+            } else {
+                filterFixWrap.classList.remove('active');
+            }
+        }
+
+        fixFilter()
+        window.addEventListener('scroll', fixFilter);
+    }
 })();

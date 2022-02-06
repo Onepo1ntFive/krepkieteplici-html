@@ -116,7 +116,12 @@ button.b-button {
     &:hover {
         opacity: 0.8;
     }
-
+    &--small {
+        padding: 1.1rem;
+        font-size: 1.5rem;
+        width: 30rem;
+        max-width: 100%;
+    }
     &--white-border {
         border: 2px solid $color-white;
         background-color: transparent;
