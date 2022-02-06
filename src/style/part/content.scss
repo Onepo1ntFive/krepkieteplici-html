@@ -1,0 +1,10 @@
+.content {
+    margin-bottom: 2rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 3rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 4rem;
+    }
+}

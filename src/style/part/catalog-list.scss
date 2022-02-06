@@ -1,14 +1,12 @@
 .b-catalog-wrap {
     position: relative;
-    margin-bottom: 5rem;
     padding-bottom: 5rem;
 
     @media (min-width: $breakpoint-desktop) {
-        margin-bottom: 10rem;
         padding-bottom: 10rem;
         display: flex;
         flex-flow: row nowrap;
-        
+
         .catalog-wrap__filter {
             padding-right: 3rem;
             width: 30rem;
@@ -17,16 +15,6 @@
         .catalog-wrap__catalog {
             flex: 1 auto;
         }
-    }
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: -3000px;
-        right: -3000px;
-        border-bottom: 1px solid $color-gray;
     }
 }
 /*----------*/
@@ -50,10 +38,12 @@
         flex-flow: column nowrap;
         width: 100%;
 
-        &:last-child {
-            margin-bottom: 0;
+        @media (max-width: calc(#{$breakpoint-tablet} - 1px)) {
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
-    
+
         @media (min-width: $breakpoint-tablet) {
             margin: 0 1.5rem 3rem;
             width: calc(50% - 3rem);
@@ -112,11 +102,43 @@
         }
     }
     .catalog-list__footer {
-        margin-top: auto;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-between;
+    }
+    .catalog-list__params {
+        padding-top: 2rem;
+
+        .catalog-list__param {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            border-radius: 5px;
+            font-size: 1.3rem;
+
+            &:nth-child(2n + 1) {
+                background-color: $color-lightgray;
+            }
+
+            img {
+                width: 3rem;
+            }
+            span {
+                width: 100%;
+                max-width: 8rem;
+                padding-top: 0.4em;
+                padding-bottom: 0.4em;
+                padding-left: 0.5rem;
+                font-weight: bold;
+            }
+            ins {
+                padding-left: 0.5rem;
+                padding-top: 0.4em;
+                padding-bottom: 0.4em;
+                text-decoration: none;
+            }
+        }
     }
     .catalog-list__price {
         font-weight: bold;
@@ -150,7 +172,7 @@
     }
     &--carousel {
         margin-bottom: 5rem;
-        
+
         @media (min-width: $breakpoint-desktop) {
             margin-bottom: 10rem;
         }
@@ -214,7 +236,7 @@
         box-shadow: 0px 0px 8px rgba(8, 35, 48, 0.24);
         cursor: pointer;
         transition: box-shadow 0.2s ease-in-out;
-        
+
         @media (min-width: $breakpoint-desktop) {
             width: 5rem;
             height: 5rem;
@@ -228,8 +250,8 @@
         svg {
             vertical-align: middle;
             width: 1.8rem;
-                height: 1.8rem;
-            
+            height: 1.8rem;
+
             @media (min-width: $breakpoint-desktop) {
                 width: auto;
                 height: auto;

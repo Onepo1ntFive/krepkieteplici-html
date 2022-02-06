@@ -1,26 +1,61 @@
 .b-minifilter {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
     margin-bottom: 5rem;
     white-space: nowrap;
     overflow: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
 
-    a {
+    & > span {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 2rem;
         margin-right: 1.5rem;
-        text-decoration: none;
+        position: relative;
         font-size: 1.5rem;
+        cursor: pointer;
         color: $color-font;
+        transition: color 0.2s ease-in-out;
 
         ins {
-            color: $color-font-gray;
+            position: absolute;
+            top: 40%;
+            right: 0;
+            transform: translateY(-50%);
+            line-height: 1;
+            font-size: 3rem;
+            font-weight: 300;
             text-decoration: none;
+            transition: color 0.2s ease-in-out;
         }
     }
-    a.active,
-    a:hover {
+    & > span:hover {
         text-decoration: none;
-        color: $color-green;
 
         ins {
             color: $color-font-gray;
+        }
+    }
+    .minifilter__reset {
+        img {
+            margin-left: 1rem;
+            display: inline-block;
+            vertical-align: middle;
+            transition: transform 0.2s ease-in-out;
+        }
+        span {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: $color-font-gray;
+
+            &:hover img {
+                transform: rotate(180deg);
+            }
         }
     }
 }
