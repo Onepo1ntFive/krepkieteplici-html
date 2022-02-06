@@ -29,6 +29,16 @@
         font-size: 1.4rem;
         color: $color-font-gray;
     }
+    .news__badge {
+        padding: 0.3rem 1rem;
+        margin-bottom: 1rem;
+        border: 2px solid $color-green;
+        border-radius: 3px;
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 1;
+        color: $color-green;
+    }
     .news__title {
         margin-bottom: 2rem;
         display: block;
@@ -66,6 +76,18 @@
             }
             @media (min-width: $breakpoint-desktop) {
                 width: 50%;
+            }
+        }
+    }
+    &--list {
+        .news__item {
+            width: 100%;
+            
+            @media (min-width: $breakpoint-tablet) {
+                width: 50%;
+            }
+            @media (min-width: $breakpoint-desktop) {
+                width: 33.33%;
             }
         }
     }
@@ -127,6 +149,70 @@
                 img {
                     transform: translateX(0.5rem) rotate(-180deg);
                 }
+            }
+        }
+    }
+}
+/*----------*/
+.b-news-filter {
+    padding-bottom: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $breakpoint-desktop) {
+        padding-bottom: 5rem;
+    }
+
+    h1 {
+        @media (min-width: $breakpoint-tablet) {
+            margin: 0;
+        }
+    }
+
+    .news-filter__items {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        overflow: auto;
+        width: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: auto;
+            flex-wrap: wrap;
+        }
+
+        a {
+            &:link,
+            &:visited {
+                padding: 1rem 2rem;
+                margin-right: 2rem;
+                border: 2px solid $color-gray;
+                border-radius: 5px;
+                color: $color-font;
+                transition-property: color, border-color;
+                transition-duration: 0.2s;
+                line-height: 1;
+                transition-timing-function: ease-in-out;
+
+                @media (min-width: $breakpoint-tablet) {
+                    margin-right: 0;
+                    margin-left: 3rem;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    border-color: $color-green;
+                    color: $color-green;
+                }
+            }
+            &:hover {
+                border-color: $color-green;
+                color: $color-green;
             }
         }
     }

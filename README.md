@@ -10,3 +10,4 @@
 * https://onepo1ntfive.github.io/krepkieteplici-html/catalog-page.html
 * https://onepo1ntfive.github.io/krepkieteplici-html/catalog-detail.html
 * https://onepo1ntfive.github.io/krepkieteplici-html/cart.html
+* https://onepo1ntfive.github.io/krepkieteplici-html/news.html
