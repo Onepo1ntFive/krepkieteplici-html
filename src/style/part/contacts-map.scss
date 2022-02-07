@@ -42,8 +42,11 @@
     .contacts-map__map {
         position: relative;
         width: 100%;
-        min-height: 40rem;
-
+        min-height: 18rem;
+   
+        @media (min-width: $breakpoint-tablet) {
+            min-height: 40rem;
+        }
         @media (min-width: $breakpoint-desktop) {
             padding-left: 2rem;
             width: 50%;
