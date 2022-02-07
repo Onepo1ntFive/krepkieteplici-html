@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Крепкие теплицы - Корзина</title>
+    <title>Крепкие теплицы - каталог списковая</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -148,97 +148,85 @@
 
         <section class="l-content">
             <div class="content__wrap">
-                <h1>Корзина</h1>
-                <div class="b-cart">
-                    <div class="cart__clear">
-                        <span>
-                            Очистить корзину
-                            <ins>
-                                <img src="./img/icon-basket.svg" alt="">
-                                <img class="cart__hat" src="./img/icon-basket-separ.svg" alt="">
-                            </ins>
-                        </span>
+
+                <div class="b-contacts-header">
+                    <div class="contacts-header__title">
+                        <h1>Контакты</h1>
+                        <a href="#"><img src="./img/icon-list-green.svg" alt=""> Скачать реквизиты компании</a>
                     </div>
-                    <div class="cart__items">
-                        <div class="cart__item">
-                            <picture class="cart__pic">
-                                <source srcset='./img/catalog-pic.webp' type='image/webp'>
-                                <source srcset='./img/catalog-pic.png' type='image/png'>
-                                <img src='./img/catalog-pic.png' alt=''>
-                            </picture>
-                            <div class="cart__inner">
-                                <div class="cart__content">
-                                    <div class="cart__item-title">Артикул</div>
-                                    <div class="cart__title"><a target="_blank" href="#">Теплица Урожайная ЭКОНОМ</a></div>
-                                    <ul class="cart__specs">
-                                        <li><span>Размер теплицы:</span> 3 x 4 метров</li>
-                                        <li><span>Сборка:</span> да</li>
-                                    </ul>
-                                </div>
-                                <div class="cart__price">
-                                    <div class="cart__item-title">Цена</div> 18 000 <span class="b-ruble-font">Р</span>
-                                </div>
-                                <div class="cart__count">
-                                    <div class="cart__item-title">Количество</div>
-                                    <div class="b-count">
-                                        <span class="count__minus js-count-input-minus"></span>
-                                        <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-                                        <span class="count__plus js-count-input-plus"></span>
-                                    </div>
-                                </div>
-                                <div class="cart__price cart__price--cost">
-                                    <div class="cart__item-title"> Цена</div> 18 000 <span class="b-ruble-font">Р</span>
-                                </div>
-                            </div>
-                            <div class="cart__delete"><span><img src="./img/cross.svg" alt=""></span></div>
+                    <div class="contacts-header__qr">
+                        <div class="contacts-header__qr-title">
+                            QR-код <span>(используйте камеру смартфона)</span>
                         </div>
-                        <div class="cart__item">
-                            <picture class="cart__pic">
-                                <source srcset='./img/catalog-pic.webp' type='image/webp'>
-                                <source srcset='./img/catalog-pic.png' type='image/png'>
-                                <img src='./img/catalog-pic.png' alt=''>
-                            </picture>
-                            <div class="cart__inner">
-                                <div class="cart__content">
-                                    <div class="cart__item-title">Артикул</div>
-                                    <div class="cart__title"><a target="_blank" href="#">Теплица Урожайная ЭКОНОМ</a></div>
-                                    <ul class="cart__specs">
-                                        <li><span>Размер теплицы:</span> 3 x 4 метров</li>
-                                        <li><span>Сборка:</span> да</li>
-                                    </ul>
-                                </div>
-                                <div class="cart__price">
-                                    <div class="cart__item-title">Цена</div> 18 000 <span class="b-ruble-font">Р</span>
-                                </div>
-                                <div class="cart__count">
-                                    <div class="cart__item-title">Количество</div>
-                                    <div class="b-count">
-                                        <span class="count__minus js-count-input-minus"></span>
-                                        <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-                                        <span class="count__plus js-count-input-plus"></span>
-                                    </div>
-                                </div>
-                                <div class="cart__price cart__price--cost">
-                                    <div class="cart__item-title"> Цена</div> 18 000 <span class="b-ruble-font">Р</span>
-                                </div>
+                        <picture>
+                            <source srcset='./img/qr.webp' type='image/webp'>
+                            <source srcset='./img/qr.png' type='image/png'>
+                            <img src='./img/qr.png' alt=''>
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="b-contacts-map">
+                    <div class="contacts-map__content">
+                        <div class="contacts-map__items">
+                            <h2>Офиса продаж</h2>
+                            <div class="contacts-map__item">
+                                <span>Адрес</span><span>214031, Россия, г. Смоленск, ул. Ново-Московская, д. 2/8</span>
                             </div>
-                            <div class="cart__delete"><span><img src="./img/cross.svg" alt=""></span></div>
+                            <div class="contacts-map__item">
+                                <span>Телефон</span><span><a href="tel:88003021602">8&nbsp;800&nbsp; 302-16-02</a>, <a href="tel:+74812631065">+7(4812)&nbsp;63-10-65</a>, <a href="tel:+74812339828">+7(4812)&nbsp;33-98-28</a></span>
+                            </div>
+                            <div class="contacts-map__item">
+                                <span>E-mail</span><span><a href="mailto:smol.ft@yandex.ru">smol.ft@yandex.ru</a></span>
+                            </div>
+                            <div class="contacts-map__item">
+                                <span>Viber, WhatsApp</span><span><a href="tel:+79036493107">+7 903-649-31-07</a></span>
+                            </div>
+                            <div class="contacts-map__item">
+                                <span>Режим работы</span><span>Понедельник-пятница: 9.00 - 18.00 <br>Суббота-воскресенье: 9.00 - 15.00 </span>
+                            </div>
+                        </div>
+                        <div class="contacts-map__items">
+                            <h2>Оптовый отдел</h2>
+                            <div class="contacts-map__item">
+                                <span>Телефон</span><span><a href="tel:+79056975048">+7 905-697-50-48</a></span>
+                            </div>
+                            <div class="contacts-map__item">
+                                <span>E-mail</span><span><a href="mailto:optsft@yandex.ru">optsft@yandex.ru</a></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="cart__resume">
-                        <div class="cart__back">
-                            <a href="#"><img src="./img/icon-arr-left.svg" alt=""> Назад к покупкам</a>
+                    <div class="contacts-map__map">
+                        <div class="contacts-map__map-block">
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0327bd39753cfc143f8870fbe962f96c03aeb416a8e4ac6fa5900740a6eb9b93&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
                         </div>
-                        <div class="cart__total">
-                            Итого: <span>36 000 <ins class="b-ruble-font">Р</ins></span>
+                    </div>
+                    <hr>
+                    <div class="contacts-map__content">
+                        <div class="contacts-map__items">
+                            <h2>Склад компании</h2>
+                            <div class="contacts-map__item">
+                                <span>Адрес</span><span>Россия, Смоленский район, д. Магалинщина, ул. Дорожная, д. 11</span>
+                            </div>
+                            <div class="contacts-map__item">
+                                <span>Режим работы</span><span>Понедельник-пятница: 9.00 - 18.00</span>
+                            </div>
+                        </div>
+                        <h3>Важно!</h3>
+                        <p>Отгрузка производится только после подтверждения склада о готовности заказа к самовывозу и полной оплаты товара. </p>
+                        <p>На складе действует пропускная система, поэтому обязательно предварительно согласуйте с менеджером офиса продаж день и время забора заказа со склада.</p>
+                    </div>
+                    <div class="contacts-map__map">
+                        <div class="contacts-map__map-block">
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A96a94f7512102040ded05bed490c0925b16bb738a90a7651dc82c6ed450ebb36&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
                         </div>
                     </div>
                 </div>
                 <div class="b-form">
-                    <h2 class="h1">Оформление заказа</h2>
+                    <h2>Форма обратной связи</h2>
+                    <p>Если вам необходима консультация или вы желаете обратиться к представителям компании с предложением, заполните форму, расположенную ниже. В течение 24 часов ваше сообщение будет обработано, и мы обязательно свяжемся с вами.</p>
                     <form>
                         <div class="form__item">
-                            <div class="form__separator"><span>Контактные данные</span></div>
                             <div class="form__inputs">
                                 <div class="form__input">
                                     <div class="b-input">
@@ -258,82 +246,6 @@
                                         <label for="form-input-3">E-mail *</label>
                                     </div>
                                 </div>
-                                <div class="form__input">
-                                    <div class="b-input">
-                                        <input type="text" name="" id="form-input-4" required>
-                                        <label for="form-input-4">Почтовый индекс *</label>
-                                    </div>
-                                </div>
-                                <div class="form__input form__input--x2">
-                                    <div class="b-input">
-                                        <input type="text" name="" id="form-input-5" required>
-                                        <label for="form-input-5">Адрес доставки *</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form__item">
-                            <div class="form__separator"><span>Способ доставки</span></div>
-                            <div class="form__inputs">
-                                <div class="form__input">
-                                    <div class="b-inputbox b-inputbox--radio">
-                                        <input type="radio" name="deliv" id="deliv-1">
-                                        <label class="inputbox__input" for="deliv-1"></label>
-                                        <label class="inputbox__label" for="deliv-1">Самовывоз (бесплатно)</label>
-                                    </div>
-                                </div>
-                                <div class="form__input form__input--x2">
-                                    <div class="b-inputbox b-inputbox--radio">
-                                        <input type="radio" name="deliv" id="deliv-2">
-                                        <label class="inputbox__input" for="deliv-2"></label>
-                                        <label class="inputbox__label" for="deliv-2">Доставка по Смоленской области (30 р/км)</label>
-                                    </div>
-                                </div>
-                                <div class="form__input">
-                                    <div class="b-inputbox b-inputbox--radio">
-                                        <input type="radio" name="deliv" id="deliv-3">
-                                        <label class="inputbox__input" for="deliv-3"></label>
-                                        <label class="inputbox__label" for="deliv-3">Доставка по Смоленску (500 р) </label>
-                                    </div>
-                                </div>
-                                <div class="form__input form__input--x2">
-                                    <div class="b-inputbox b-inputbox--radio">
-                                        <input type="radio" name="deliv" id="deliv-4">
-                                        <label class="inputbox__input" for="deliv-4"></label>
-                                        <label class="inputbox__label" for="deliv-4">Доставка по регионам РФ до транспортной компании в Смоленске (бесплатно) <ins>+ по тарифу транспортной компании до вашего города</ins></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form__item">
-                            <div class="form__separator"><span>Способ оплаты</span></div>
-                            <div class="form__inputs">
-                                <div class="form__input">
-                                    <div class="b-inputbox b-inputbox--radio">
-                                        <input type="radio" name="payment" id="payment-1">
-                                        <label class="inputbox__input" for="payment-1"></label>
-                                        <label class="inputbox__label" for="payment-1">Оплата онлайн картами VISA, MASTERCARD</label>
-                                    </div>
-                                </div>
-                                <div class="form__input form__input form__input--x2">
-                                    <div class="b-inputbox b-inputbox--radio">
-                                        <input type="radio" name="payment" id="payment-2">
-                                        <label class="inputbox__input" for="payment-2"></label>
-                                        <label class="inputbox__label" for="payment-2">Безналичный расчет</label>
-                                    </div>
-                                </div>
-                                <div class="form__input">
-                                    <div class="b-inputbox b-inputbox--radio">
-                                        <input type="radio" name="payment" id="payment-3">
-                                        <label class="inputbox__input" for="payment-3"></label>
-                                        <label class="inputbox__label" for="payment-3">Наличными при получении</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form__item">
-                            <div class="form__separator"><span>Дополнительные пожелания</span></div>
-                            <div class="form__inputs">
                                 <div class="form__input form__input--x3">
                                     <div class="b-input">
                                         <textarea name="" id="form-textarea-1" required></textarea>
@@ -347,22 +259,12 @@
                                 Нажатием кнопки я принимаю условия <a href="#">Оферты</a> по использованию сайта и согласен с <a href="#">Политикой конфиденциальности</a> 
                             </div>
                             <div class="form__btn">
-                                <button type="submit">Оформить заказ</button>
+                                <button type="submit">Отправить заявку</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="b-callback">
-                    <picture class="callback__pic">
-                        <source srcset='./img/callback-pic.webp' type='image/webp'>
-                        <source srcset='./img/callback-pic.png' type='image/png'>
-                        <img src='./img/callback-pic.png' alt=''>
-                    </picture>
-                    <div class="callback__content">
-                        <h2>Eсть вопросы?</h2>
-                        <p>Если у вас есть вопросы к нашим специалистам, мы будем рады проконсультировать вас по телефону <a href="tel:88003021602">8 800 302 16 02</a> или электронной почте <a href="mailto:smol.ft@yandex.ru">smol.ft@yandex.ru</a></p>
-                    </div>
-                </div>
+
             </div>
         </section> 
 
