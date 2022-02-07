@@ -4,6 +4,18 @@
     .h1 {
         margin-bottom: 4rem;
     }
+
+    & > p {
+        margin-bottom: 1em;
+
+        & + form {
+            padding-top: 2rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
     .form__item {
         padding-bottom: 3rem;
     }
@@ -71,16 +83,17 @@
             text-align: center;
             padding-bottom: 0;
             text-align: inherit;
+            max-width: 50%;
         }
 
         a {
-            border-bottom: 1px solid $color-font;
+            border-bottom: 1px solid transparent;
             font-size: 1.5rem;
-            color: $color-font;
+            color: $color-green;
             transition-property: border-color;
         }
         a:hover {
-            border-bottom-color: transparent;
+            border-bottom-color: $color-green;
         }
 
         .b-inputbox {
@@ -121,7 +134,7 @@
         display: inline-block;
         vertical-align: bottom;
 
-        input[type="file"] {
+        input[type='file'] {
             position: absolute;
             bottom: 100%;
             left: 0;
@@ -137,7 +150,7 @@
             z-index: 1;
             border: 2px solid $color-green;
             border-radius: 0.5rem;
-            background: url("../img/icon-file-plus.svg") 50% 50% no-repeat $color-lightgreen;
+            background: url('../img/icon-file-plus.svg') 50% 50% no-repeat $color-lightgreen;
             transition: background 0.2s ease-in-out;
             cursor: pointer;
 
@@ -374,7 +387,7 @@
         }
 
         &::before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             left: 50%;
@@ -406,7 +419,7 @@
             &::before {
                 width: 0.6rem;
                 height: 0.6rem;
-                background: url("../img/circle.svg") 50% 50% no-repeat;
+                background: url('../img/circle.svg') 50% 50% no-repeat;
             }
         }
     }
@@ -417,7 +430,7 @@
             &::before {
                 width: 1.1rem;
                 height: 0.8rem;
-                background: url("../img/check.svg") 50% 50% no-repeat;
+                background: url('../img/check.svg') 50% 50% no-repeat;
             }
         }
     }
@@ -437,8 +450,8 @@
         width: 2.5rem;
         height: 2.5rem;
         display: block;
-        background: url("../img/icon-star.svg") 50% 50%/25px auto no-repeat;
-        content: "";
+        background: url('../img/icon-star.svg') 50% 50%/25px auto no-repeat;
+        content: '';
     }
     & > label {
         position: relative;
@@ -449,32 +462,32 @@
     & > input:checked ~ label,
     &:not(:checked) > label:hover,
     &:not(:checked) > label:hover ~ label {
-        background: url("../img/icon-star-full.svg") 50% 50%/25px no-repeat;
+        background: url('../img/icon-star-full.svg') 50% 50%/25px no-repeat;
     }
     & > input:checked + label:hover,
     & > input:checked ~ label:hover,
     & > label:hover ~ input:checked ~ label,
     & > input:checked ~ label:hover ~ label {
-        background: url("../img/icon-star-full.svg") 50% 50%/25px no-repeat;
+        background: url('../img/icon-star-full.svg') 50% 50%/25px no-repeat;
     }
 
     &--notouch {
         pointer-events: none;
     }
-    &--big > label:before  {
+    &--big > label:before {
         width: 4rem;
         height: 4rem;
-        background: url("../img/icon-star.svg") 50% 50%/40px auto no-repeat;
+        background: url('../img/icon-star.svg') 50% 50%/40px auto no-repeat;
     }
     &--big > input:checked ~ label,
     &--big:not(:checked) > label:hover,
     &--big:not(:checked) > label:hover ~ label {
-        background: url("../img/icon-star-full.svg") 50% 50%/40px no-repeat;
+        background: url('../img/icon-star-full.svg') 50% 50%/40px no-repeat;
     }
     &--big > input:checked + label:hover,
     &--big > input:checked ~ label:hover,
     &--big > label:hover ~ input:checked ~ label,
     &--big > input:checked ~ label:hover ~ label {
-        background: url("../img/icon-star-full.svg") 50% 50%/40px no-repeat;
+        background: url('../img/icon-star-full.svg') 50% 50%/40px no-repeat;
     }
 }

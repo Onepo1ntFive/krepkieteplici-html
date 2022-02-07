@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крепкие теплицы - каталог списковая</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="l-wrap"> 
+
+        //= template/_header.html
+
+        <section class="l-content">
+            <div class="content__wrap">
+
+                <div class="b-contacts-header">
+                    <div class="contacts-header__title">
+                        <h1>Контакты</h1>
+                        <a href="#"><img src="./img/icon-list-green.svg" alt=""> Скачать реквизиты компании</a>
+                    </div>
+                    <div class="contacts-header__qr">
+                        <div class="contacts-header__qr-title">
+                            QR-код <span>(используйте камеру смартфона)</span>
+                        </div>
+                        <picture>
+                            <source srcset='./img/qr.webp' type='image/webp'>
+                            <source srcset='./img/qr.png' type='image/png'>
+                            <img src='./img/qr.png' alt=''>
+                        </picture>
+                    </div>
+                </div>
+
+                //= template/contacts-map.html
+                //= template/contacts-form.html
+
+            </div>
+        </section> 
+
+        //= template/_footer.html
+
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

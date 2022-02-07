@@ -1,0 +1,88 @@
+.b-contacts-map {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 3rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 8rem;
+    }
+
+    hr {
+        border: 0;
+        border-bottom: 1px solid $color-gray;
+        width: 100%;
+        display: block;
+
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            margin-top: 8rem;
+            margin-bottom: 8rem;
+        }
+    }
+
+    .contacts-map__content {
+        padding-bottom: 3rem;
+        width: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-right: 2rem;
+            padding-bottom: 0;
+            width: 50%;
+        }
+    }
+    .contacts-map__map {
+        position: relative;
+        width: 100%;
+        min-height: 40rem;
+
+        @media (min-width: $breakpoint-desktop) {
+            padding-left: 2rem;
+            width: 50%;
+        }
+
+        &-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+    }
+    .contacts-map__items {
+        padding-bottom: 5rem;
+    }
+    .contacts-map__item {
+        padding-bottom: 1rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            flex-wrap: nowrap;
+        }
+
+        span {
+            &:first-child {
+                width: 19rem;
+                color: $color-font-gray;
+            }
+            &:last-child {
+                width: calc(100% - 19rem);
+            }
+        }
+    }
+}
