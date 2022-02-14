@@ -77,6 +77,7 @@
     }
     .form__agree {
         padding-bottom: 2rem;
+        font-size: 1.5rem;
         line-height: 1.2;
 
         @media (min-width: $breakpoint-tablet) {
@@ -88,7 +89,6 @@
 
         a {
             border-bottom: 1px solid transparent;
-            font-size: 1.5rem;
             color: $color-green;
             transition-property: border-color;
         }
@@ -298,6 +298,19 @@
         }
         .form__btn {
             max-width: 26rem;
+        }
+    }
+
+    &--popup {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+
+        .form__agree {
+            margin-bottom: 2rem;
+            max-width: 100%;
+        }
+        .form__btn {
+            max-width: 100%;
         }
     }
 }

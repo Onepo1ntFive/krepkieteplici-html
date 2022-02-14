@@ -10,25 +10,283 @@
 }
 /*----------*/
 .b-head-menu {
-    a {
-        padding: 0.4rem 2.4rem;
-        display: inline-block;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    .head-menu__item {
         border-left: 2px solid $color-green;
-        text-transform: uppercase;
-        color: $color-black;
-        transition: color 0.2s ease-in-out;
 
         &:first-child {
             border-left: 0;
-            padding-left: 0;
+
+            a {
+                padding-left: 0;
+            }
+        }
+
+        a {
+            padding: 0.4rem 2.4rem;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.5rem;
+
+            text-transform: uppercase;
+            color: $color-black;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: $color-green;
         }
     }
-    a:hover {
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a:link,
+    a:visited {
+        display: block;
+    }
+    .head-menu__submenu {
+        position: relative;
+    }
+    .head-menu__submenu-item-1 {
+        display: block;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1.5rem;
+        }
+    }
+    .head-menu__submenu-item-1 span {
+        margin-right: 0.5rem;
+        display: block;
+        position: relative;
+    }
+    .head-menu__submenu-item-1 > span {
+        padding: 0.4rem 2.4rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        ins {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            height: 20px;
+            width: 20px;
+            border-radius: 100rem;
+            background: url('../img/icon-chevron.svg') 50% 50% no-repeat;
+            transform: rotate(-180deg);
+            transition-property: background, transform;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+        }
+    }
+    .head-menu__submenu-item-1:hover > span,
+    .head-menu__submenu-item-1--on > span {
+        text-decoration: none;
+        opacity: 0.75;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        .head-menu__submenu-item-1:hover > span {
+            ins {
+                background: url('../img/icon-chevron-green.svg') 50% 50% no-repeat;
+                transform: rotate(0deg);
+            }
+        }
+    }
+    .head-menu__submenu-level-wrap {
+        position: absolute;
+        left: 0;
+        top: calc(100% + 15px);
+        overflow: auto;
+        display: none;
+        background-color: $color-white;
+        border-radius: 0.5rem;
+        width: 100%;
+        max-height: calc(100vh - 10rem - 6.3rem - 1rem);
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 26rem;
+            overflow: hidden;
+            max-height: none;
+        }
+    }
+    .full {
+        width: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: calc(26rem + 26rem);
+        }
+    }
+    .head-menu__submenu-item-1--haschild .head-menu__submenu-level-wrap {
+        -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    }
+    @media (min-width: $breakpoint-desktop) {
+        .head-menu__submenu-item-1:hover .head-menu__submenu-level-wrap {
+            display: block;
+        }
+    }
+    .head-menu__submenu-level-2 {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        z-index: 35;
+        background-color: $color-white;
+        width: 100%;
+        text-align: left;
+        height: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: 26rem;
+        }
+    }
+    .head-menu__submenu-item-1:hover .head-menu__submenu-level-2 {
+        display: block;
+    }
+    .head-menu__submenu-item-2 {
+        border-top: 1px solid $color-gray;
+    }
+    .head-menu__submenu-item-2:first-child {
+        border-top: 0;
+    }
+    .head-menu__submenu-item-2 > span {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        ins {
+            width: 4rem;
+            height: 4rem;
+            flex: none;
+            display: none;
+            background: url("../img/menu-chevron.svg") 50% 50% no-repeat;
+            transform: rotate(90deg);
+
+            @media (min-width: $breakpoint-tablet) {
+                transform: rotate(0deg);
+            }
+        }
+    }
+    .head-menu__submenu-item-2:hover > span {
+        ins {
+            background: url("../img/menu-chevron-green.svg") 50% 50% no-repeat;
+        }
+    }
+    .head-menu__submenu-item-2 > span a:link,
+    .head-menu__submenu-item-2 > span a:visited {
+        display: block;
+        padding: 1.5rem 2rem;
+        font-size: 1.3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-font;
+        flex: 1 auto;
+        background: $color-white;
+    }
+    .head-menu__submenu-item-2:hover > span a:link,
+    .head-menu__submenu-item-2:hover > span a:visited,
+    .head-menu__submenu-item-2--on > span a:link,
+    .head-menu__submenu-item-2--on > span a:visited,
+    .head-menu__submenu-item-2--on > span a:hover,
+    .head-menu__submenu-item-2--on > span a:active {
         text-decoration: none;
         color: $color-green;
+        background: $color-white;
+    }
+    .head-menu__submenu-item-2--haschild > span {
+        ins {
+            display: block;
+        }
+    }
+    // --
+    .head-menu__submenu-level-3 {
+        padding: 1rem 0;
+        display: none;
+        z-index: 35;
+        width: 26rem;
+        background-color: $color-white;
+
+        @media (min-width: $breakpoint-tablet) {
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+    }
+    @media (min-width: $breakpoint-tablet) {
+        .head-menu__submenu-level-3:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            height: 999px;
+            width: 26rem;
+            background-color: $color-white;
+        }
+    }
+    .head-menu__submenu-item-2:hover .head-menu__submenu-level-3 {
+        display: block;
+    }
+    .head-menu__submenu-item-3 > span a:link,
+    .head-menu__submenu-item-3 > span a:visited {
+        padding: 0.8rem 2rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $color-font;
+        display: block;
+        background: $color-white;
+    }
+    .head-menu__submenu-item-3:hover > span a:link,
+    .head-menu__submenu-item-3:hover > span a:visited,
+    .head-menu__submenu-item-3--on > span a:link,
+    .head-menu__submenu-item-3--on > span a:visited,
+    .head-menu__submenu-item-3--on > span a:hover,
+    .head-menu__submenu-item-3--on > span a:active {
+        text-decoration: none;
+        color: $color-green;
+        display: block;
+        background: $color-white;
+    }
+
+    // --
+    &.active .head-menu__submenu-item-1 > span {
+        ins {
+            background-color: transparent;
+
+            &::before {
+                bottom: 0;
+                transform: rotate(225deg);
+            }
+            &::after {
+                top: 0;
+                transform: rotate(-225deg);
+            }
+        }
+    }
+    &.active .head-menu__submenu-item-1 .head-menu__submenu-level-wrap {
+        display: block;
     }
 }
 /*----------*/
