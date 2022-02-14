@@ -13926,7 +13926,7 @@ function readURL(input) {
           $menutopListWrap.style.height = menutopListHeight + 'px';
         }
 
-        $menutopListWrap.classList.add("menu__level-wrap--full");
+        $menutopListWrap.classList.add("full");
       }
     });
     hasChild.addEventListener('mouseleave', function (event) {
@@ -13936,19 +13936,51 @@ function readURL(input) {
         var thisChild = event.target;
         $menutopListWrap = thisChild.parentNode.parentNode;
         $menutopListWrap.style.height = 'auto';
-        $menutopListWrap.classList.remove("menu__level-wrap--full");
+        $menutopListWrap.classList.remove("full");
       }
     });
   });
-  var menuOpen = document.querySelector('.js-menu-open');
-  var menuBlock = document.querySelector('.js-menu');
-  menuOpen.addEventListener('click', function () {
-    if (menuBlock.classList.contains('active')) {
-      menuBlock.classList.remove('active');
-    } else {
-      menuBlock.classList.add('active');
-    }
+  var menuBlocks = document.querySelectorAll('.js-menu');
+  Array.prototype.forEach.call(menuBlocks, function (menuBlock, i) {
+    var menuOpen = menuBlock.querySelector('.js-menu-open');
+    menuOpen.addEventListener('click', function () {
+      if (menuBlock.classList.contains('active')) {
+        menuBlock.classList.remove('active');
+      } else {
+        menuBlock.classList.add('active');
+      }
+    });
   });
+})();
+"use strict";
+
+(function () {
+  if (document.querySelector('.js-popup-show')) {
+    var popupButtons = document.querySelectorAll('.js-popup-show');
+    var popupBlocks = document.querySelectorAll('.js-popup');
+    var popupClose = document.querySelectorAll('.js-popup-close');
+    var popupBg = document.querySelector('.js-popup-bg');
+    Array.prototype.forEach.call(popupButtons, function (popupButton, i) {
+      popupButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        var popupId = popupButton.dataset.popup;
+        var popupTarget = document.querySelector(popupId);
+
+        if (popupTarget) {
+          popupBg.classList.add('active');
+          popupTarget.classList.add('active');
+        }
+      });
+    });
+    Array.prototype.forEach.call(popupClose, function (popupCloseBtn, i) {
+      popupCloseBtn.addEventListener('click', function () {
+        popupBg.classList.remove('active');
+        Array.prototype.forEach.call(popupBlocks, function (popupBlock, i) {
+          popupBlock.classList.remove('active');
+        });
+      });
+    });
+  }
 })();
 "use strict";
 
