@@ -13940,17 +13940,23 @@ function readURL(input) {
       }
     });
   });
-  var menuBlocks = document.querySelectorAll('.js-menu');
-  Array.prototype.forEach.call(menuBlocks, function (menuBlock, i) {
-    var menuOpen = menuBlock.querySelector('.js-menu-open');
-    menuOpen.addEventListener('click', function () {
-      if (menuBlock.classList.contains('active')) {
-        menuBlock.classList.remove('active');
-      } else {
-        menuBlock.classList.add('active');
+
+  if (document.querySelector('.js-menu')) {
+    var menuBlocks = document.querySelectorAll('.js-menu');
+    Array.prototype.forEach.call(menuBlocks, function (menuBlock, i) {
+      var menuOpen = menuBlock.querySelector('.js-menu-open');
+
+      if (menuOpen) {
+        menuOpen.addEventListener('click', function () {
+          if (menuBlock.classList.contains('active')) {
+            menuBlock.classList.remove('active');
+          } else {
+            menuBlock.classList.add('active');
+          }
+        });
       }
     });
-  });
+  }
 })();
 "use strict";
 
@@ -13978,6 +13984,98 @@ function readURL(input) {
         Array.prototype.forEach.call(popupBlocks, function (popupBlock, i) {
           popupBlock.classList.remove('active');
         });
+      });
+    });
+  }
+})();
+"use strict";
+
+(function () {
+  var windowWidth = window.innerWidth;
+
+  function setHeight(el, val) {
+    if (typeof val === "function") val = val();
+    if (typeof val === "string") el.style.height = val;else el.style.height = val + "px";
+  }
+
+  var mainLevel = document.querySelector('.js-menu-main');
+  var menuAchors = document.querySelectorAll('.js-menu-item ins');
+  var secondLevel = document.querySelectorAll('.js-menu-next');
+  var backBtn = document.querySelector('.js-menu-back');
+  var nextLevel = null;
+  var mainLevelHeight = mainLevel.offsetHeight;
+  var nextLevelHeight = null;
+  setHeight(mainLevel, mainLevelHeight);
+  Array.prototype.forEach.call(menuAchors, function (el, i) {
+    el.addEventListener('click', function (event) {
+      event.preventDefault();
+      nextLevel = el.parentNode.nextElementSibling;
+      secondLevel.forEach(function (item, i) {
+        item.classList.remove('active');
+      });
+      nextLevel.classList.add('active');
+      mainLevel.classList.add('active');
+      backBtn.classList.add('active');
+      nextLevelHeight = nextLevel.offsetHeight;
+      setHeight(mainLevel, nextLevelHeight);
+    });
+  });
+  backBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    backBtn.classList.remove('active');
+    mainLevel.classList.remove('active');
+    secondLevel.forEach(function (item, i) {
+      item.classList.remove('active');
+    });
+    setHeight(mainLevel, mainLevelHeight);
+  });
+  var showSidebarBtns = document.querySelectorAll('.js-sidebar-show');
+  var hideSidebarBtns = document.querySelectorAll('.js-sidebar-hide');
+  var body = document.querySelector('body');
+  var clickedEl = null;
+  Array.prototype.forEach.call(showSidebarBtns, function (el, i) {
+    el.addEventListener('click', function (event) {
+      event.preventDefault();
+      clickedEl = el;
+      showSidebar();
+    });
+  });
+  Array.prototype.forEach.call(hideSidebarBtns, function (el, i) {
+    el.addEventListener('click', function (event) {
+      event.preventDefault();
+      hideSidebar();
+    });
+  });
+  var sidebar = document.querySelector('.js-sidebar');
+  var sidebarBg = document.querySelector('.js-sidebar-bg');
+
+  function showSidebar() {
+    windowWidth = window.innerWidth;
+
+    if (windowWidth < 1200) {
+      sidebar.classList.add('active');
+      sidebarBg.classList.add('active');
+      clickedEl.classList.add('active');
+      body.classList.add('ov-h');
+    }
+  }
+
+  function hideSidebar() {
+    sidebar.classList.remove('active');
+    sidebarBg.classList.remove('active');
+    clickedEl.classList.remove('active');
+    body.classList.remove('ov-h');
+  }
+
+  if (document.querySelector('.js-menu-collapse')) {
+    var menuCollapseBtns = document.querySelectorAll('.js-menu-collapse ins');
+    var menuCollapseContent = null;
+    Array.prototype.forEach.call(menuCollapseBtns, function (menuCollapseBtn, i) {
+      menuCollapseContent = menuCollapseBtn.parentNode.parentNode.querySelector('.js-menu-collapse-item');
+      console.log(menuCollapseContent);
+      menuCollapseBtn.addEventListener('click', function () {
+        menuCollapseBtn.parentNode.parentNode.classList.toggle('active');
+        slideToggle(menuCollapseContent);
       });
     });
   }

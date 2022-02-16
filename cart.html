@@ -22,12 +22,8 @@
                                 </span>
                                 <div class="head-menu__submenu-level-wrap js-menutop-wrap">
                                     <ul class="head-menu__submenu-level-2 js-menutop-parent">
-                                        <li class="head-menu__submenu-item-2 head-menu__submenu-item-2--haschild js-menutop-haschild">
+                                        <li class="head-menu__submenu-item-2">
                                             <span><a href="#">Партнерам</a> <ins></ins></span>
-                                            <ul class="head-menu__submenu-level-3 js-menutop-child">
-                                                <li class="head-menu__submenu-item-3"><span><a href="#">Реквизиты</a></span></li>
-                                                <li class="head-menu__submenu-item-3"><span><a href="#">Что то еше</a></span></li>
-                                            </ul>
                                         </li>
                                         <li class="head-menu__submenu-item-2">
                                             <span><a href="#">Еще пункт меню</a> <ins></ins></span>
@@ -92,7 +88,7 @@
                 <div class="b-menu js-menu">
                     <ul class="menu__level-1">
                         <li class="menu__item-1 menu__item-1--haschild">
-                            <span class="js-menu-open">
+                            <span class="js-sidebar-show">
                                 <span>Каталог продукции</span><ins></ins>
                             </span>
                             <div class="menu__level-wrap js-menutop-wrap">
@@ -464,6 +460,196 @@
                 </div>
             </div>
         </section>
+        <div class="sidebar js-sidebar">
+            <div class="sidebar__top">
+                <div class="b-head b-head--mini">
+                    <div class="head__contacts">
+                        <div class="head__contacts-item head__contacts-item--phone">
+                            <a href="tel:88003021602">
+                                <img src="./img/icon-phone.svg" alt="phone">
+                                <span>8 800 302 16 02</span>
+                            </a>
+                        </div>
+                        <div class="head__contacts-item head__contacts-item--email">
+                            <a href="mailto:smol.ft@yandex.ru">smol.ft@yandex.ru</a>
+                        </div>
+                    </div>
+                        <a class="head__logo" href="/">
+                            <picture>
+                                <source srcset='./img/main-logo.webp' type='image/webp'>
+                                <source srcset='./img/main-logo.png' type='image/png'>
+                                <img src='./img/main-logo.png' alt=''>
+                            </picture>
+                        </a>
+                    <div class="head__cart">
+                        <div class="b-head-cart">
+                            <a href="#">
+                                <img src="./img/icon-cart.svg" alt="">
+                                <div class="head-cart__title">Корзина</div>
+                                <div class="head-cart__count">Тут пока ничего нет</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-menusearch-wrap">
+                    <span class="js-sidebar-hide sidebar__close">&times;</span>
+                    <div class="b-search">
+                        <form>
+                            <input type="text" id="searchField" placeholder="Поиск по сайту">
+                            <button type="submit">
+                                <img src="./img/icon-search.svg" alt="Поиск">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar__inner">
+                <div class="sidebar__header">
+                    <span class="sidebar__back-btn js-menu-back"><img src="./img/arr-prev.svg" alt="">Назад</span>
+                </div> 
+                <nav class="sidebar__menu">
+                    <ul class="sidebar__menu-level-1 js-menu-main">
+                        <li class="sidebar__menu-item-1 js-menu-item">
+                            <span><a href="#">Теплицы</a><ins></ins></span>
+                            <ul class="sidebar__menu-level-2 js-menu-next">
+                                <li class="sidebar__menu-item-spacer"><span><a href="#">Теплицы</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__menu-item-1 js-menu-item">
+                            <span><a href="#">Аксессуары для теплиц</a><ins></ins></span>
+                            <ul class="sidebar__menu-level-2 js-menu-next">
+                                <li class="sidebar__menu-item-spacer"><span><a href="#">Аксессуары для теплиц</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__menu-item-1 js-menu-item">
+                            <span><a href="#">Грядки</a><ins></ins></span>
+                            <ul class="sidebar__menu-level-2 js-menu-next">
+                                <li class="sidebar__menu-item-spacer"><span><a href="#">Грядки</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__menu-item-1 js-menu-item">
+                            <span><a href="#">Сварные беседки</a><ins></ins></span>
+                            <ul class="sidebar__menu-level-2 js-menu-next">
+                                <li class="sidebar__menu-item-spacer"><span><a href="#">Сварные беседки</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__menu-item-1 js-menu-item">
+                            <span><a href="#">Товары для сада</a><ins></ins></span>
+                            <ul class="sidebar__menu-level-2 js-menu-next">
+                                <li class="sidebar__menu-item-spacer"><span><a href="#">Товары для сада</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__menu-item-1 js-menu-item">
+                            <span><a href="#">Покупателям</a><ins></ins></span>
+                            <ul class="sidebar__menu-level-2 js-menu-next">
+                                <li class="sidebar__menu-item-spacer"><span><a href="#">Покупателям</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="sidebar__menu-level-1 sidebar__menu-level-1--gray">
+                        <li class="sidebar__menu-item-1 js-menu-collapse">
+                            <span><a href="#">О компании</a><ins></ins></span>
+                            <ul class="sidebar__menu-level-2 js-menu-collapse-item">
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                                <li class="sidebar__menu-item-2"><span><a href="#">Lorem, ipsum.</a></span></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar__menu-item-1"><span><a href="#">Покупателям</a></span></li>
+                        <li class="sidebar__menu-item-1"><span><a href="#">Акции</a></span></li>
+                        <li class="sidebar__menu-item-1"><span><a href="#">Контакты</a></span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="sidebar-bg js-sidebar-bg"></div>
 
     </div>
     <script src="./js/main.js"></script>
