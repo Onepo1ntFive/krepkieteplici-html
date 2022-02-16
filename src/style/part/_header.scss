@@ -58,7 +58,7 @@
         display: block;
 
         &::before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             top: 100%;
@@ -112,7 +112,7 @@
     }
     .head-menu__submenu-level-wrap {
         position: absolute;
-        left: 0;
+        left: 2.4rem;
         top: calc(100% + 15px);
         overflow: auto;
         display: none;
@@ -145,6 +145,8 @@
         }
     }
     .head-menu__submenu-level-2 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         display: block;
         position: relative;
         top: auto;
@@ -163,9 +165,6 @@
     .head-menu__submenu-item-1:hover .head-menu__submenu-level-2 {
         display: block;
     }
-    .head-menu__submenu-item-2 {
-        border-top: 1px solid $color-gray;
-    }
     .head-menu__submenu-item-2:first-child {
         border-top: 0;
     }
@@ -179,7 +178,7 @@
             height: 4rem;
             flex: none;
             display: none;
-            background: url("../img/menu-chevron.svg") 50% 50% no-repeat;
+            background: url('../img/menu-chevron.svg') 50% 50% no-repeat;
             transform: rotate(90deg);
 
             @media (min-width: $breakpoint-tablet) {
@@ -189,17 +188,15 @@
     }
     .head-menu__submenu-item-2:hover > span {
         ins {
-            background: url("../img/menu-chevron-green.svg") 50% 50% no-repeat;
+            background: url('../img/menu-chevron-green.svg') 50% 50% no-repeat;
         }
     }
     .head-menu__submenu-item-2 > span a:link,
     .head-menu__submenu-item-2 > span a:visited {
         display: block;
-        padding: 1.5rem 2rem;
-        font-size: 1.3rem;
+        padding: 0.7rem 2.5rem;
+        font-size: 1.5rem;
         text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
         color: $color-font;
         flex: 1 auto;
         background: $color-white;
@@ -235,7 +232,7 @@
     }
     @media (min-width: $breakpoint-tablet) {
         .head-menu__submenu-level-3:before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             left: 0;
@@ -465,6 +462,29 @@
 
             @media (min-width: $breakpoint-tablet) {
                 display: block;
+            }
+        }
+    }
+
+    &--mini {
+        .head__contacts {
+            position: relative;
+
+            a[href^='tel:'] {
+                span {
+                    display: none;
+                }
+            }
+            a[href^='mailto:'] {
+                display: none;
+            }
+        }
+        .head__cart {
+            .head-cart__title {
+                display: none;
+            }
+            .head-cart__count {
+                display: none;
             }
         }
     }

@@ -45,17 +45,21 @@
         });
     });
 
-    const menuBlocks = document.querySelectorAll('.js-menu');
-    Array.prototype.forEach.call(menuBlocks, function (menuBlock, i) {
-        let menuOpen = menuBlock.querySelector('.js-menu-open');
-        menuOpen.addEventListener('click', () => {
-            if (menuBlock.classList.contains('active')) {
-                menuBlock.classList.remove('active');
-            } else {
-                menuBlock.classList.add('active');
+    if (document.querySelector('.js-menu')) {
+        const menuBlocks = document.querySelectorAll('.js-menu');
+        Array.prototype.forEach.call(menuBlocks, function (menuBlock, i) {
+            let menuOpen = menuBlock.querySelector('.js-menu-open');
+            if (menuOpen) {
+                menuOpen.addEventListener('click', () => {
+                    if (menuBlock.classList.contains('active')) {
+                        menuBlock.classList.remove('active');
+                    } else {
+                        menuBlock.classList.add('active');
+                    }
+                });
             }
         });
-    });
+    }
 
 })();
 
