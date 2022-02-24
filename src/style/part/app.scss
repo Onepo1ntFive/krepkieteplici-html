@@ -39,7 +39,7 @@ h1,
 .h1 {
     margin-bottom: 0.75em;
     font-family: $font-family;
-    line-height: 1.2;
+    line-height: 1.3;
     font-weight: bold;
     font-size: 2.6rem;
     color: $color-font;
@@ -52,36 +52,40 @@ h2,
 .h2 {
     margin-bottom: 0.75em;
     font-family: $font-family;
-    line-height: 1.2;
+    line-height: 1.3;
     font-weight: bold;
     font-size: 2.2rem;
     color: $color-font;
 
     @media (min-width: $breakpoint-tablet) {
-        font-size: 3.4rem;
+        font-size: 2.6rem;
     }
 }
 h3,
 .h3 {
     margin-bottom: 0.75em;
     font-family: $font-family;
-    line-height: 1.2;
+    line-height: 1.3;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: $color-font;
 
     @media (min-width: $breakpoint-tablet) {
-        font-size: 1.8rem;
+        font-size: 2.6rem;
     }
 }
 h4,
 .h4 {
     margin-bottom: 0.75em;
     font-family: $font-family;
-    line-height: 1.2;
+    line-height: 1.3;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: $color-font;
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 2rem;
+    }
 }
 a {
     color: $color-green;
@@ -103,18 +107,43 @@ a:hover {
 a.b-button,
 button.b-button {
     padding: 1.5rem 3rem;
+    border: none;
     border-radius: 0.5rem;
     display: block;
-    background: $color-red;
-    opacity: 1;
+    background: none;
+    width: 100%;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.5rem;
     color: $color-white;
-    transition: opacity 0.2s ease-in-out;
+    transition-property: opacity, color, background;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
 
-    &:hover {
-        opacity: 0.8;
+    img {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 1.5rem;
+        line-height: 0;
+    }
+
+    &--red {
+        background-color: $color-red;
+        &:hover {
+            background-color: $color-darkred;
+        }
+    }
+    &--green {
+        background-color: $color-green;
+        &:hover {
+            background-color: $color-darkgreen;
+        }
+    }
+    &--icon {
+        position: relative;
+        padding-right: 6rem;
     }
     &--small {
         padding: 1.1rem;
@@ -125,6 +154,11 @@ button.b-button {
     &--white-border {
         border: 2px solid $color-white;
         background-color: transparent;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-green;
+        }
     }
     &--mw250 {
         margin: auto;
@@ -132,6 +166,7 @@ button.b-button {
     }
     &--center {
         margin: auto;
+        width: 100%;
         max-width: 25rem;
     }
 }

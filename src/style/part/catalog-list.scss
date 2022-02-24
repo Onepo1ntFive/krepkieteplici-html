@@ -32,7 +32,7 @@
     .catalog-list__item {
         padding: 1.5rem;
         margin-bottom: 3rem;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray2;
         border-radius: 0.5rem;
         display: flex;
         flex-flow: column nowrap;
@@ -89,7 +89,7 @@
     .catalog-list__assembly {
         width: 11rem;
         padding: 0.5rem 1rem;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray2;
         border-radius: 0.5rem;
         display: flex;
         flex-flow: row wrap;
@@ -255,7 +255,7 @@
             }
         }
         path {
-            fill: $color-gray;
+            fill: $color-gray2;
             transition: fill 0.2s ease-in-out;
         }
 

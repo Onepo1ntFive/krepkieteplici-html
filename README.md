@@ -16,3 +16,4 @@
 * https://onepo1ntfive.github.io/krepkieteplici-html/content-page.html
 * https://onepo1ntfive.github.io/krepkieteplici-html/content-dealers.html
 * https://onepo1ntfive.github.io/krepkieteplici-html/form.html
+* https://onepo1ntfive.github.io/krepkieteplici-html/ui.html

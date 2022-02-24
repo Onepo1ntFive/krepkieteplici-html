@@ -20,7 +20,7 @@
     .tabs-acc__nav-item {
         margin-right: 2rem;
         padding: 1rem 3rem;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray2;
         border-radius: 0.5rem 0.5rem 0 0;
         background-color: $color-lightgray;
         min-width: 13rem;
@@ -102,7 +102,7 @@
     }
     .tabs-acc__items {
         padding: 1rem 1.5rem;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray2;
         border-radius: 0.5rem;
 
         @media (min-width: $breakpoint-tablet) {

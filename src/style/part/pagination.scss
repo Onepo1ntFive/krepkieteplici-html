@@ -5,7 +5,7 @@
     a, span {
         margin-left: 0.6rem;
         margin-right: 0.6rem;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray2;
         border-radius: 0.5rem;
         display: inline-block;
         width: 4rem;
@@ -31,6 +31,11 @@
     a.pagination__prev,
     a.pagination__next {
         border: 0;
+
+        &:hover {
+            border-color: 0;
+            box-shadow: none;
+        }
     }
     svg {
         vertical-align: middle;

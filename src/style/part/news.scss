@@ -79,7 +79,7 @@
 
         a {
             padding: 1rem;
-            border: 1px solid $color-gray;
+            border: 1px solid $color-gray2;
             border-radius: 5px;
             display: flex;
             flex-flow: row nowrap;
@@ -228,14 +228,14 @@
 
     .news-main__col {
         padding-top: 3rem;
-        border-top: 1px solid $color-gray;
+        border-top: 1px solid $color-gray2;
         padding-left: 3rem;
         padding-right: 3rem;
         width: 100%;
 
         @media (min-width: $breakpoint-desktop) {
             border-bottom: 0;
-            border-left: 1px solid $color-gray;
+            border-left: 1px solid $color-gray2;
             width: 33.33%;
         }
 
@@ -317,7 +317,7 @@
             &:visited {
                 padding: 1rem 2rem;
                 margin-right: 2rem;
-                border: 2px solid $color-gray;
+                border: 2px solid $color-gray2;
                 border-radius: 5px;
                 color: $color-font;
                 transition-property: color, border-color;

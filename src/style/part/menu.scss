@@ -58,7 +58,7 @@
         text-decoration: none;
         text-transform: uppercase;
         color: $color-white;
-        transition: opacity 0.3s ease-in-out;
+        transition: background 0.3s ease-in-out;
         text-align: center;
         cursor: pointer;
 
@@ -137,7 +137,7 @@
     .menu__item-1:hover > span,
     .menu__item-1--on > span {
         text-decoration: none;
-        opacity: 0.75;
+        background-color: $color-darkgreen;
     }
     @media (min-width: $breakpoint-desktop) {
         .menu__item-1:hover > span {
@@ -210,7 +210,7 @@
         display: block;
     }
     .menu__item-2 {
-        border-top: 1px solid $color-gray;
+        border-top: 1px solid $color-gray2;
     }
     .menu__item-2:first-child {
         border-top: 0;

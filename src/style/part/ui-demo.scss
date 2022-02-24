@@ -1,0 +1,72 @@
+.ui {
+    &__colors {
+        margin-bottom: 5rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__color {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: calc(100% / 3);
+        text-align: center;
+
+        @media (min-width: $breakpoint-tablet) {
+            width: calc(100% / 6);
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+            border-radius: 1000rem;
+        }
+        ins {
+            display: block;
+            padding-top: 1rem;
+            text-decoration: none;
+        }
+
+        &--green span {
+            background-color: $color-green;
+        }
+        &--red span {
+            background-color: $color-red;
+        }
+        &--black span {
+            background-color: $color-black;
+        }
+        &--gray span {
+            background-color: $color-gray;
+        }
+        &--gray2 span {
+            background-color: $color-gray2;
+        }
+        &--lightgray span {
+            background-color: $color-lightgray;
+        }
+    }
+
+    &__buttons {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    &__button {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &__slider-btns {
+        margin-bottom: 5rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        position: relative;
+        max-width: 10rem;
+        height: 10rem;
+    }
+    &__pagination {
+        margin-bottom: 5rem;
+    }
+}

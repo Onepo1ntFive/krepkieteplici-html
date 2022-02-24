@@ -6,7 +6,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $color-gray;
+    border-bottom: 1px solid $color-gray2;
 }
 /*----------*/
 .b-head-menu {
@@ -292,7 +292,7 @@
 
     img {
         opacity: 1;
-        background-color: $color-gray;
+        background-color: $color-gray2;
         border-radius: 100rem;
         transition: opacity 0.2s ease-in-out;
     }
@@ -514,22 +514,22 @@
         transition: border-color 0.2s ease-in-out;
 
         &:focus {
-            border-color: $color-gray;
+            border-color: $color-gray2;
         }
 
         ::-webkit-input-placeholder {
-            color: $color-gray;
+            color: $color-gray2;
         }
         :-moz-placeholder {
-            color: $color-gray;
+            color: $color-gray2;
             opacity: 1;
         }
         ::-moz-placeholder {
-            color: $color-gray;
+            color: $color-gray2;
             opacity: 1;
         }
         :-ms-input-placeholder {
-            color: $color-gray;
+            color: $color-gray2;
         }
     }
     button {

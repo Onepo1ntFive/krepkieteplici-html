@@ -351,7 +351,7 @@
 
         input {
             padding: 0.7rem 1rem;
-            border: 1px solid $color-gray;
+            border: 1px solid $color-gray2;
             border-radius: 0.5rem;
             display: inline-block;
             vertical-align: middle;
@@ -520,7 +520,7 @@
         .filter__btns {
             padding-top: 2rem;
             padding-bottom: 2rem;
-            border-top: 1px solid $color-gray;
+            border-top: 1px solid $color-gray2;
             justify-content: flex-end;
 
             .filter__reset {
@@ -546,7 +546,7 @@
 }
 .noUi-horizontal {
     height: 4px;
-    background-color: $color-gray;
+    background-color: $color-gray2;
 
     .noUi-handle {
         top: -0.8rem;

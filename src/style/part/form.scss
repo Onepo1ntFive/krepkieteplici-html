@@ -20,7 +20,7 @@
         padding-bottom: 3rem;
     }
     .form__separator {
-        border-bottom: 1px solid $color-gray;
+        border-bottom: 1px solid $color-gray2;
         line-height: 1;
         margin-bottom: 3rem;
         font-size: 2rem;
@@ -164,7 +164,7 @@
             }
         }
         .form__fileupload-image {
-            border: 1px solid $color-gray;
+            border: 1px solid $color-gray2;
             border-radius: 0.5rem;
             padding: 0.2rem;
             width: 7rem;
@@ -335,7 +335,7 @@
     input,
     textarea {
         padding: 1rem 2rem;
-        border: 1px solid $color-gray;
+        border: 1px solid $color-gray2;
         border-radius: 0.3rem;
         background-color: $color-white;
         font-size: 1.5rem;
